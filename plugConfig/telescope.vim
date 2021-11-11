@@ -35,7 +35,6 @@ function TelescopeFileSearch() abort
 endfunction
 
 nnoremap <leader>fb <cmd>Telescope file_browser<cr><esc>
-nnoremap <leader>fg <cmd>Telescope git_files<cr>
 nnoremap <leader>fp <cmd>Telescope projects<cr>
 nnoremap <leader><Space> <cmd>Telescope buffers<cr>
 
