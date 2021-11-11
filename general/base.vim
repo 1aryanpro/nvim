@@ -41,4 +41,4 @@ set wrapmargin=0
 " Line Number Specifications
 set number
 set relativenumber
-set signcolumn=auto
+set signcolumn=yes

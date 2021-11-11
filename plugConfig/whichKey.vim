@@ -47,7 +47,6 @@ let g:which_key_map.w = {
 let g:which_key_map.c = {
 		\ 'name': '+ColorSchemes',
 		\ 'c': 'Change Color Scheme',
-		\ 'i': 'Toggle OneDark'
 	  \ }
 
 let g:which_key_map.n = {
