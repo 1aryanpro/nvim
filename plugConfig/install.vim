@@ -10,8 +10,12 @@ Plug 'glepnir/dashboard-nvim'
 " Utility
 Plug 'airblade/vim-gitgutter'
 Plug 'unblevable/quick-scope'
-Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'metakirby5/codi.vim'
+Plug 'preservim/nerdcommenter'
+
+" Indentation
+Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Status Line
 Plug 'hoob3rt/lualine.nvim'
@@ -27,7 +31,6 @@ Plug 'ahmedkhalf/project.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Markdown Tools
-Plug 'vimwiki/vimwiki'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 
 " Autocomplete

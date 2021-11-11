@@ -14,6 +14,7 @@ source $NVIMCONFIG/general/terminal.vim
 source $NVIMCONFIG/plugConfig/install.vim
 source $NVIMCONFIG/plugConfig/dashboard.vim
 source $NVIMCONFIG/plugConfig/gitgutter.vim
+source $NVIMCONFIG/plugConfig/nerdcommenter.vim
 source $NVIMCONFIG/plugConfig/quickscope.vim
 source $NVIMCONFIG/plugConfig/lualine.lua
 source $NVIMCONFIG/plugConfig/telescope.vim

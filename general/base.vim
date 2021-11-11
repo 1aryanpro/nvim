@@ -20,15 +20,11 @@ set visualbell
 set nocompatible
 
 " Tabs and Indentation
-set noexpandtab
+set expandtab
 set tabstop=2
 set shiftwidth=2
 set autoindent
 set smartindent
-
-set list
-set listchars=tab:▏\ ,trail:·
-autocmd FileType help,md,text,which_key,dashboard set nolist
 
 set smartcase
 
