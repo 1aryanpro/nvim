@@ -22,5 +22,3 @@ source $NVIMCONFIG/plugConfig/coc.vim
 source $NVIMCONFIG/plugConfig/goyo.vim
 source $NVIMCONFIG/plugConfig/whichKey.vim
 source $NVIMCONFIG/plugConfig/misc.vim
-source $NVIMCONFIG/plugConfig/misc.lua
-

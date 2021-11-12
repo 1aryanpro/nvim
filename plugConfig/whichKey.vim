@@ -15,6 +15,7 @@ let g:which_key_map = {
 	\ 'R': 'Rename Symbol',
 	\ 't': 'Open Integrated Terminal',
 	\ ';': 'Open Dashboard',
+  \ '/': 'Comment Line(s)',
 	\ }
 
 let g:which_key_map.f = {
