@@ -23,6 +23,6 @@ source $NVIMCONFIG/plugConfig/goyo.vim
 source $NVIMCONFIG/plugConfig/whichKey.vim
 source $NVIMCONFIG/plugConfig/misc.vim
 
-source $NVIMCONFIG/lua/lspconfig/lsp-config.vim
-source $NVIMCONFIG/lua/lspconfig/defaults.lua
 source $NVIMCONFIG/lua/cmp-config.lua
+source $NVIMCONFIG/lua/lspconfig/lsp-config.vim
+" source $NVIMCONFIG/lua/lspconfig/defaults.lua

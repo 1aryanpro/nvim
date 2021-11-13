@@ -11,7 +11,7 @@ set timeoutlen=500
 set splitbelow
 set splitright
 
-set concealcursor=""
+set mouse=a
 
 set hidden
 
