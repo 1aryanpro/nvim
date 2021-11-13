@@ -13,23 +13,28 @@ nnoremap <silent> <Leader>fm <cmd>DashboardJumpMark<CR>
 nnoremap <silent> <Leader>nf <cmd>DashboardNewFile<CR>
 
 let g:dashboard_custom_section={
-  \ 'last_session': {
-      \ 'description': ['  Open Previous Session     SPC s l'],
-      \ 'command': 'SessionLoad'
-			\ },
-	\ 'find_file': {
-			\ 'description': ['  Search Files              SPC f f'],
-			\ 'command': 'call TelescopeFileSearch()'
-	  	\ },
-	\ 'find_history': {
-			\ 'description': ['ﭯ  Search History            SPC f h'],
-			\ 'command': 'DashboardFindHistory'
-	  	\ },
-	\ 'open_projects': {
-			\ 'description': ['  Open Recent Project       SPC f p'],
+	\ 'a': {
+			\ 'description': ['  Open Recent Project  '],
 			\ 'command': 'Telescope projects'
 		  \ },
+	\ 'b': {
+			\ 'description': ['  Search Files         '],
+			\ 'command': 'call TelescopeFileSearch()'
+	  	\ },
+	\ 'c': {
+			\ 'description': ['ﭯ  Search History       '],
+			\ 'command': 'DashboardFindHistory'
+	  	\ },
+  \ 'd': {
+			\ 'description': ['  Open Config          '],
+			\ 'command': 'call OpenConfig()'
+	  	\ },
   \ }
+
+function OpenConfig() abort
+  cd ~/.config/nvim 
+  call TelescopeFileSearch()
+endfunction
 
 let g:dashboard_custom_header = [
 	\ "██╗  ██╗███████╗██╗     ██╗      ██████╗ ", 

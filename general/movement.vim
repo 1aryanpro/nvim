@@ -10,12 +10,6 @@ nnoremap <Down>  <C-W>j
 nnoremap <Up>    <C-W>k
 nnoremap <Right> <C-W>l
 
-" Arrow keys to window movement
-noremap <Left>  <cmd>vert res -3<cr>
-noremap <Down>  <cmd>res -3<cr>
-noremap <Up>    <cmd>res +3<cr>
-noremap <Right> <cmd>vert res +3<cr>
-
 " screen cursor movement
 noremap <silent> k gk
 noremap <silent> j gj
