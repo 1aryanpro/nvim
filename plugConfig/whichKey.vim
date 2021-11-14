@@ -5,17 +5,22 @@ let g:which_key_use_floating_win = 0
 
 let g:which_key_map = {
 	\ 'name': 'Leader',
+  \ 'a': 'CodeAction',
+	\ 'p': 'Format File Prettier',
+  \ 'r': 'Rename Symbol',
+	\ 't': 'Open Integrated Terminal',
+	\ 'z': 'Goyo Zen Mode',
+	\ ';': 'Open Dashboard',
+  \ '/': 'Comment Line(s)',
+  \ }
+
+
+let g:which_key_map.m = {
+	\ 'name': '+MoveWindow',
 	\ 'h': 'Window Move Left',
 	\ 'j': 'Window Move Down',
 	\ 'k': 'Window Move Up',
 	\ 'l': 'Window Move Right',
-	\ 'p': 'Format File Prettier',
-	\ 'a': 'Coc CodeAction',
-	\ 'z': 'Goyo Zen Mode',
-	\ 'R': 'Rename Symbol',
-	\ 't': 'Open Integrated Terminal',
-	\ ';': 'Open Dashboard',
-  \ '/': 'Comment Line(s)',
 	\ }
 
 let g:which_key_map.f = {

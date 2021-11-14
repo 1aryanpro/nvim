@@ -38,6 +38,9 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'rafamadriz/friendly-snippets'
 
+" Autopairs
+Plug 'jiangmiao/auto-pairs'
+
 " Focus Mode
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'

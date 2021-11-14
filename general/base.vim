@@ -2,22 +2,17 @@ let mapleader = "\<Space>"
 let maplocallleader = "\\"
 nnoremap <Space> <NOP>
 
-syntax on
-
-set noshowmode
-
+" Convenience
+set nocompatible
+set smartcase
+set visualbell
+set hidden
 set timeoutlen=500
-
 set splitbelow
 set splitright
-
 set mouse=a
-
-set hidden
-
-set visualbell
-
-set nocompatible
+syntax on
+set noshowmode
 
 " Tabs and Indentation
 set expandtab
@@ -26,8 +21,8 @@ set shiftwidth=2
 set autoindent
 set smartindent
 
-set smartcase
 
+" Prevent Unecessary Behavior
 set noswapfile
 set nobackup
 set nowritebackup

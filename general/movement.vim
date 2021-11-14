@@ -1,8 +1,8 @@
 " leader+direction to window movement
-nnoremap <leader>h <C-W>h
-nnoremap <leader>j <C-W>j
-nnoremap <leader>k <C-W>k
-nnoremap <leader>l <C-W>l
+nnoremap <leader>mh <C-W>h
+nnoremap <leader>mj <C-W>j
+nnoremap <leader>mk <C-W>k
+nnoremap <leader>ml <C-W>l
 
 " Arrow keys to window movement
 nnoremap <Left>  <C-W>h
