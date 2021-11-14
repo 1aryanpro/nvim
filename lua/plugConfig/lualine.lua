@@ -2,11 +2,17 @@ require'lualine'.setup {
   options = {
     theme = 'onedark',
     disabled_filetypes = {'which_key'},
+    component_separators = { left = ''}
   },
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch'},
-    lualine_c = {'filename', 'GitStatus'},
+    lualine_c = {
+      'filename',
+      {'GitAdded',   color = {fg = '#98c379'}},
+      {'GitEdited',  color = {fg = '#61afef'}},
+      {'GitRemoved', color = {fg = '#e86671'}}
+    },
     lualine_x = {'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
