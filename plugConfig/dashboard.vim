@@ -10,7 +10,7 @@ nnoremap <silent> <Leader>ff <cmd>call TelescopeFileSearch()<CR>
 nnoremap <silent> <Leader>cc <cmd>DashboardChangeColorscheme<CR>
 nnoremap <silent> <Leader>fa <cmd>DashboardFindWord<CR>
 nnoremap <silent> <Leader>fm <cmd>DashboardJumpMark<CR>
-nnoremap <silent> <Leader>nf <cmd>DashboardNewFile<CR>
+nnoremap <silent> <Leader>nf <cmd>DashboardNewFile<CR>:file 
 
 let g:dashboard_custom_section={
 	\ 'a': {

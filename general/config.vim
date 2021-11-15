@@ -1,7 +1,3 @@
-let mapleader = "\<Space>"
-let maplocallleader = "\\"
-nnoremap <Space> <NOP>
-
 " Convenience
 set nocompatible
 set smartcase

@@ -2,10 +2,8 @@
 "  vim config 
 " ------------
 
-source $NVIMCONFIG/general/base.vim
-source $NVIMCONFIG/general/movement.vim
-source $NVIMCONFIG/general/terminal.vim
-
+source $NVIMCONFIG/general/config.vim
+source $NVIMCONFIG/general/mappings.vim
 
 " ----------
 "  vim_plug 
