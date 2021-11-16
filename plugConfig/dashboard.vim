@@ -13,22 +13,22 @@ nnoremap <silent> <Leader>fm <cmd>DashboardJumpMark<CR>
 nnoremap <silent> <Leader>nf <cmd>DashboardNewFile<CR>:file 
 
 let g:dashboard_custom_section={
-	\ 'a': {
-			\ 'description': ['  Open Recent Project  '],
-			\ 'command': 'Telescope projects'
-		  \ },
-	\ 'b': {
-			\ 'description': ['  Search Files         '],
-			\ 'command': 'call TelescopeFileSearch()'
-	  	\ },
-	\ 'c': {
-			\ 'description': ['ﭯ  Search History       '],
-			\ 'command': 'DashboardFindHistory'
-	  	\ },
+  \ 'a': {
+      \ 'description': ['  Search Files         '],
+      \ 'command': 'call TelescopeFileSearch()'
+      \ },
+  \ 'b': {
+      \ 'description': ['  Open Recent Project  '],
+      \ 'command': 'Telescope projects'
+      \ },
+  \ 'c': {
+      \ 'description': ['ﭯ  Search History       '],
+      \ 'command': 'DashboardFindHistory'
+      \ },
   \ 'd': {
-			\ 'description': ['  Open Config          '],
-			\ 'command': 'call OpenConfig()'
-	  	\ },
+      \ 'description': ['  Open Config          '],
+      \ 'command': 'call OpenConfig()'
+      \ },
   \ }
 
 function OpenConfig() abort
@@ -37,10 +37,10 @@ function OpenConfig() abort
 endfunction
 
 let g:dashboard_custom_header = [
-	\ "██╗  ██╗███████╗██╗     ██╗      ██████╗ ", 
-	\ "██║  ██║██╔════╝██║     ██║     ██╔═══██╗",
-	\ "███████║█████╗  ██║     ██║     ██║   ██║",
-	\ "██╔══██║██╔══╝  ██║     ██║     ██║   ██║",
-	\ "██║  ██║███████╗███████╗███████╗╚██████╔╝",
-	\ "╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝ "
-	\ ]
+  \ "██╗  ██╗███████╗██╗     ██╗      ██████╗ ", 
+  \ "██║  ██║██╔════╝██║     ██║     ██╔═══██╗",
+  \ "███████║█████╗  ██║     ██║     ██║   ██║",
+  \ "██╔══██║██╔══╝  ██║     ██║     ██║   ██║",
+  \ "██║  ██║███████╗███████╗███████╗╚██████╔╝",
+  \ "╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝ "
+  \ ]

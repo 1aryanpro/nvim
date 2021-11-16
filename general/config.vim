@@ -17,7 +17,6 @@ set shiftwidth=2
 set autoindent
 set smartindent
 
-
 " Prevent Unecessary Behavior
 set noswapfile
 set nobackup

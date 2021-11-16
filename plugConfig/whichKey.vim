@@ -6,6 +6,7 @@ let g:which_key_use_floating_win = 0
 let g:which_key_map = {
   \ 'name': 'Leader',
   \ 'a': 'CodeAction',
+  \ 'h': 'Remove Highlight',
   \ 'r': 'Rename Symbol',
   \ 't': 'Open Integrated Terminal',
   \ 'z': 'Goyo Zen Mode',
@@ -27,17 +28,6 @@ let g:which_key_map.s = {
   \ 'name': '+Session',
   \ 's': 'Session Save',
   \ 'l': 'Session Load',
-  \ }
-
-let g:which_key_map.w = {
-  \ 'name': '+VimWiki',
-  \ 'i': 'Open Diaries Dir',
-  \ 't': 'Open Index in Tab',
-  \ 'w': 'Open VimWiki Index',
-  \ 's': 'Open with UI',
-  \ 'SPC': {
-    \ 'name': '+DiaryActions'
-    \ },
   \ }
 
 let g:which_key_map.c = {

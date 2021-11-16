@@ -1,3 +1,4 @@
+let g:onedark_style = 'dark'
 colorscheme onedark
 let g:onedark_toggle_style_keymap = '<nop>'
 
@@ -10,6 +11,8 @@ let g:indentLine_fileTypeExclude = ["help", "markdown", "text", "terminal", "das
 let g:indentLine_setConceal = 0
 
 let g:instant_markdown_autostart = 0
+
+let g:python_highlight_all = 1
 
 " vsnip config
 imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'

@@ -49,6 +49,10 @@ Plug 'junegunn/limelight.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
+" FT: python
+Plug 'vim-scripts/indentpython.vim'
+Plug 'vim-python/python-syntax'
+
 " Language Server Protocol
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'

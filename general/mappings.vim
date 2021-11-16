@@ -1,6 +1,12 @@
 " set leader key
 let g:mapleader = "\<Space>"
 
+" better searching
+nnoremap <leader>h :noh<cr>
+
+" copy whole buffer to clipboard
+nnoremap <leader>y :normal! mmggVG"+y`m<cr>
+
 " ctrl+direction to window movement
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
