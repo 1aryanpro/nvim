@@ -1,5 +1,3 @@
-vim.o.completeopt = "menuone,noselect"
-
 local cmp = require'cmp'
 cmp.setup({
   snippet = {
@@ -38,8 +36,9 @@ cmp.setup({
     { name = 'path' },
     { name = 'buffer' },
     { name = 'cmdline' },
-  }, {
+    { name = 'calc' },
     { name = 'buffer' },
+    { name = 'spell' },
   })
 })
 

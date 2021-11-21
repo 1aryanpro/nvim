@@ -5,7 +5,12 @@ let g:mapleader = "\<Space>"
 nnoremap <leader>h :noh<cr>
 
 " copy whole buffer to clipboard
-nnoremap <leader>y :normal! mmggVG"+y`m<cr>
+nnoremap <leader>yf :normal! mmggVG"+y`m<cr>
+nnoremap <leader>yy :normal! mmV"+y`m<cr>
+
+" switch ^ and 0
+nnoremap 0 ^
+nnoremap ^ 0
 
 " ctrl+direction to window movement
 nnoremap <C-h> <C-w>h

@@ -10,6 +10,13 @@ set mouse=a
 syntax on
 set noshowmode
 
+" Completion Menu
+set completeopt=menuone,noselect
+
+" Spellcheck
+set spell
+set spelllang=en_us
+
 " Tabs and Indentation
 set expandtab
 set tabstop=2
@@ -17,7 +24,7 @@ set shiftwidth=2
 set autoindent
 set smartindent
 
-" Prevent Unecessary Behavior
+" Prevent Unnecessary Behavior
 set noswapfile
 set nobackup
 set nowritebackup

@@ -1,5 +1,8 @@
 call plug#begin()
 
+" Diagnostics
+Plug 'wakatime/vim-wakatime'
+
 " Color Theme
 Plug 'navarasu/onedark.nvim'
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -33,7 +36,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Markdown Tools
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 
-" Autocomplete
+" Auto complete
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'rafamadriz/friendly-snippets'
@@ -58,9 +61,12 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-calc'
 Plug 'hrsh7th/cmp-cmdline'
+Plug 'f3fora/cmp-spell'
 Plug 'hrsh7th/nvim-cmp'
 
+" Keybindings
 Plug 'liuchengxu/vim-which-key'
 
 call plug#end()
