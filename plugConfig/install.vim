@@ -1,8 +1,5 @@
 call plug#begin()
 
-" Diagnostics
-Plug 'wakatime/vim-wakatime'
-
 " Color Theme
 Plug 'navarasu/onedark.nvim'
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -15,6 +12,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'unblevable/quick-scope'
 Plug 'metakirby5/codi.vim'
 Plug 'preservim/nerdcommenter'
+Plug 'github/copilot.vim'
 
 " Indentation
 Plug 'Yggdroot/indentLine'
@@ -33,14 +31,6 @@ Plug 'ahmedkhalf/project.nvim'
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-" Markdown Tools
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
-
-" Auto complete
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'rafamadriz/friendly-snippets'
-
 " Autopairs
 Plug 'jiangmiao/auto-pairs'
 
@@ -56,15 +46,28 @@ Plug 'mxw/vim-jsx'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-python/python-syntax'
 
+" FT: md, txt
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+
+" FT: brainF
+Plug 'braindead-cc/bf-vim'
+
 " Language Server Protocol
 Plug 'neovim/nvim-lspconfig'
+
+" Intellisense
+Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-calc'
 Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/cmp-copilot'
 Plug 'f3fora/cmp-spell'
-Plug 'hrsh7th/nvim-cmp'
+
+" Snippets
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'rafamadriz/friendly-snippets'
 
 " Keybindings
 Plug 'liuchengxu/vim-which-key'
