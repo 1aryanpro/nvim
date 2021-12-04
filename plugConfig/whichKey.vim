@@ -8,6 +8,7 @@ let g:which_key_map = {
   \ 'a': 'CodeAction',
   \ 'h': 'Remove Highlight',
   \ 'r': 'Rename Symbol',
+  \ 's': 'Source Config',
   \ 't': 'Open Integrated Terminal',
   \ 'z': 'Goyo Zen Mode',
   \ ';': 'Open Dashboard',
@@ -24,20 +25,20 @@ let g:which_key_map.f = {
   \ 'p': 'Recent Projects',
   \ }
 
-let g:which_key_map.s = {
-  \ 'name': '+Session',
-  \ 's': 'Session Save',
-  \ 'l': 'Session Load',
+let g:which_key_map.c = {
+  \ 'name': '+ColorSchemes',
+  \ 'c': 'Change Color Scheme',
   \ }
 
-let g:which_key_map.c = {
-    \ 'name': '+ColorSchemes',
-    \ 'c': 'Change Color Scheme',
-    \ }
-
 let g:which_key_map.n = {
-    \ 'name': '+New',
-    \ 'f': 'New File'
-    \ }
+  \ 'name': '+New',
+  \ 'f': 'New File'
+  \ }
+
+let g:which_key_map.y = {
+  \ 'name': '+YankCB',
+  \ 'f': 'Yank File',
+  \ 'y': 'Yank Line',
+  \ }
 
 call which_key#register('<Space>', 'g:which_key_map')
