@@ -20,7 +20,7 @@ cmp.setup({
         cmp.select_next_item()
       else
         fallback()
-     end
+      end
     end,
     ['<S-Tab>'] = function(fallback)
       if cmp.visible() then
@@ -36,9 +36,8 @@ cmp.setup({
     { name = 'path' },
     { name = 'buffer' },
     { name = 'cmdline' },
-    { name = 'calc' },
+    { name = 'copilot' },
     { name = 'buffer' },
     { name = 'spell' },
   })
 })
-
