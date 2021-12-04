@@ -5,6 +5,9 @@ let g:onedark_toggle_style_keymap = '<nop>'
 " Use JSX syntax highlighting for TSX files
 autocmd BufRead,BufNewFile *.tsx setlocal syntax=javascript.jsx
 
+" Add BrainF filetype
+autocmd BufRead,BufNewFile *.bf setlocal filetype=brainfsck
+
 " IndentLine Config
 let g:indentLine_char= "▏"
 let g:indentLine_fileTypeExclude = ["help", "markdown", "text", "terminal", "dashboard", "which_key"]
