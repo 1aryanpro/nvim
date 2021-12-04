@@ -14,8 +14,8 @@ set noshowmode
 set completeopt=menuone,noselect
 
 " Spellcheck
-set spell
 set spelllang=en_us
+au FileType markdown,text setlocal spell
 
 " Tabs and Indentation
 set expandtab
