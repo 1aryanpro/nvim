@@ -8,7 +8,7 @@ let g:gitgutter_sign_modified_removed   = '┃'
 
 function! GitAdded()
   let [a,m,r] = GitGutterGetHunkSummary()
-  if a+m+r == 0
+  if a + m + r == 0
     return ''
   endif
   return printf('+%d', a)
@@ -16,7 +16,7 @@ endfunction
 
 function! GitEdited()
   let [a,m,r] = GitGutterGetHunkSummary()
-  if a+m+r == 0
+  if a + m + r == 0
     return ''
   endif
   return printf('~%d', m)
@@ -24,7 +24,7 @@ endfunction
 
 function! GitRemoved()
   let [a,m,r] = GitGutterGetHunkSummary()
-  if a+m+r == 0
+  if a + m + r == 0
     return ''
   endif
   return printf('-%d', r)
