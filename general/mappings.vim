@@ -1,16 +1,17 @@
 " set leader key
 let g:mapleader = "\<Space>"
 
-" better searching
-nnoremap <leader>h :noh<cr>
-
-" copy whole buffer to clipboard
-nnoremap <leader>yf :normal! mmggVG"+y`m<cr>
-nnoremap <leader>yy :normal! mmV"+y`m<cr>
-
-" switch ^ and 0
 nnoremap 0 ^
 nnoremap ^ 0
+
+" better searching
+nnoremap <leader>h <cmd>noh<cr>
+
+nnoremap <leader>s <cmd>source $NVIMCONFIG/init.vim<cr>
+
+" copy to clipboard
+nnoremap <leader>yf <cmd>%y+<cr>
+nnoremap <leader>yy :normal! "+yy<cr>
 
 " ctrl+direction to window movement
 nnoremap <C-h> <C-w>h
