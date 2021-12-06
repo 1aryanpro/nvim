@@ -43,7 +43,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
 " FT: python
-Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-python/python-syntax'
 
 " FT: md, txt
