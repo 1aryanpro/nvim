@@ -11,7 +11,7 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'unblevable/quick-scope'
 Plug 'metakirby5/codi.vim'
-Plug 'preservim/nerdcommenter'
+Plug 'numToStr/Comment.nvim'
 Plug 'github/copilot.vim'
 
 " Indentation
