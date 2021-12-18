@@ -65,6 +65,6 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'rafamadriz/friendly-snippets'
 
 " Keybindings
-Plug 'liuchengxu/vim-which-key'
+Plug 'folke/which-key.nvim'
 
 call plug#end()

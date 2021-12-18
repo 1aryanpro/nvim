@@ -37,6 +37,7 @@ endfunction
 command! -nargs=0 TelescopeFileSearch :call TelescopeFileSearch()
 
 nnoremap <leader>fb <cmd>Telescope file_browser<cr><esc>
+nnoremap <leader>fu <cmd>Telescope buffers<cr>
 nnoremap <leader>fp <cmd>Telescope projects<cr>
 nnoremap <leader>ff <cmd>TelescopeFileSearch<cr>
 
