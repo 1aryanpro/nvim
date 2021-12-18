@@ -1,9 +1,6 @@
 " set leader key
 let g:mapleader = "\<Space>"
 
-nnoremap 0 ^
-nnoremap ^ 0
-
 " better searching
 nnoremap <leader>h <cmd>noh<cr>
 
