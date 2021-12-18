@@ -13,8 +13,8 @@ nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
-nnoremap <silent> <space>r <cmd>lua vim.lsp.buf.rename()<CR>
-nnoremap <silent> <space>a <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <silent> <leader>r <cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap <silent> <leader>a <cmd>lua vim.lsp.buf.code_action()<CR>
 
 lua << EOF
 vim.lsp.set_log_level 'debug'
