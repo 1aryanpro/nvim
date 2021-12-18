@@ -38,12 +38,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
-" FT: html, js, css
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-
-" FT: python
-Plug 'vim-python/python-syntax'
+" FT: Generic
+Plug 'sheerun/vim-polyglot'
 
 " FT: md, txt
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
