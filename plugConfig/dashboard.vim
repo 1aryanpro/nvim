@@ -13,19 +13,30 @@ let g:dashboard_custom_section={
       \ 'description': ['  Search Files         '],
       \ 'command': 'call TelescopeFileSearch()'
       \ },
-  \ 'b': {
-      \ 'description': ['  Open Recent Project  '],
-      \ 'command': 'Telescope projects'
-      \ },
-  \ 'c': {
-      \ 'description': ['ﭯ  Search History       '],
-      \ 'command': 'DashboardFindHistory'
-      \ },
   \ 'd': {
       \ 'description': ['  Open Config          '],
       \ 'command': 'call OpenConfig()'
       \ },
   \ }
+
+" let g:dashboard_custom_section={
+  " \ 'a': {
+      " \ 'description': ['  Search Files         '],
+      " \ 'command': 'call TelescopeFileSearch()'
+      " \ },
+  " \ 'b': {
+      " \ 'description': ['  Open Recent Project  '],
+      " \ 'command': 'Telescope projects'
+      " \ },
+  " \ 'c': {
+      " \ 'description': ['ﭯ  Search History       '],
+      " \ 'command': 'DashboardFindHistory'
+      " \ },
+  " \ 'd': {
+      " \ 'description': ['  Open Config          '],
+      " \ 'command': 'call OpenConfig()'
+      " \ },
+  " \ }
 
 function OpenConfig() abort
   cd ~/.config/nvim 
