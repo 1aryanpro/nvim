@@ -1,45 +1,66 @@
 local wk = require("which-key")
 
-which_key_map = {
-  'name': 'Leader',
-  'a': 'CodeAction',
-  'h': 'Remove Highlight',
-  'r': 'Rename Symbol',
-  's': 'Source Config',
-  't': 'Open Integrated Terminal',
-  'z': 'Goyo Zen Mode',
-  ';': 'Open Dashboard',
-  '/': '+Comment',
-  '//': 'Comment Lines',
-  '?': '+BlockComment',
-  '??': 'BlockComment Lines'
+wk.setup({
+	icons = {
+		separator = "➜ ",
+	},
+	operators = {
+		["<leader>/"] = "Comment",
+		["<leader>?"] = "BlockComment",
+	},
+	ignore_missing = true,
+  spelling = {
+    enabled = true,
+    suggestions = 10,
+  },
+	layout = {
+		align = "center",
+	}
+})
+
+local leader_map = {
+	h = { "Remove Highlight" },
+	s = { "Source Config" },
+	t = { "Open Integrated Terminal" },
+	z = { "Goyo Zen Mode" },
+	["nf"] = { "New File" },
+	[";"] = { "Open Dashboard" },
+	["/"] = { "+Comment" },
+	["//"] = { "Comment Line" },
+	-- ["?"] = { "+BlockComment" },
+	-- ["??"] = { "BlockComment Line" },
+
+	l = {
+		name = "+LSP",
+		a = { "Code Actions" },
+		r = { "Rename Symbol" },
+		n = { "Goto Next Diagnostic" },
+		p = { "Goto Prev Diagnostic" },
+		k = { "Show Signature Help" },
+		f = { "Format File" },
+	},
+
+	f = {
+		name = "+Telescope",
+		f = { "Find Files" },
+		b = { "File Browser" },
+		h = { "Search History" },
+		m = { "Jump Mark" },
+		a = { "Grep Search" },
+		p = { "Recent Projects" },
+	},
+
+	c = {
+		name = "+ColorSchemes",
+		c = { "Change Color Scheme" },
+		s = { "Toggle OneDark" },
+	},
+
+	y = {
+		name = "+YankCB",
+		f = { "Copy File" },
+		y = { "Copy Line" },
+	},
 }
 
-which_key_map['f'] = {
-  'name': '+Telescope',
-  'f': 'Search Files',
-  'b': 'File Browser',
-  'h': 'Search History',
-  'm': 'Jump to Mark',
-  'a': 'Grep Search',
-  'p': 'Recent Projects',
-}
-
-which_key_map['c'] = {
-  'name': '+ColorSchemes',
-  'c': 'Change Color Scheme',
-}
-
-which_key_map['n'] = {
-  'name': '+New',
-  'f': 'New File'
-}
-
-which_key_map['y'] = {
-  'name': '+YankCB',
-  'f': 'Yank File',
-  'y': 'Yank Line',
-}
-
-wk.setup()
-wk.register(which_key_map, {prefix = '<leader>'})
+wk.register(leader_map, { prefix = "<leader>" })

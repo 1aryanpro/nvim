@@ -47,7 +47,10 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn in
 " FT: brainF
 Plug 'braindead-cc/bf-vim'
 
-" Language Server Protocol
+" FT: kitty conf
+Plug 'fladson/vim-kitty'
+
+" LSP: setup
 Plug 'neovim/nvim-lspconfig'
 
 " Intellisense

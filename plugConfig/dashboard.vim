@@ -9,37 +9,37 @@ nnoremap <silent> <Leader>fm <cmd>DashboardJumpMark<CR>
 nnoremap <silent> <Leader>nf <cmd>DashboardNewFile<CR>
 
 let g:dashboard_custom_section={
-  \ 'a': {
-      \ 'description': ['  Search Files         '],
-      \ 'command': 'call TelescopeFileSearch()'
-      \ },
-  \ 'd': {
-      \ 'description': ['  Open Config          '],
-      \ 'command': 'call OpenConfig()'
-      \ },
-  \ }
+\ 'a': {
+  \ 'description': ['  Search Files         '],
+  \ 'command': 'call TelescopeFileSearch()'
+  \ },
+\ 'd': {
+  \ 'description': ['  Open Config          '],
+  \ 'command': 'call OpenConfig()'
+  \ },
+\ }
 
 " let g:dashboard_custom_section={
-  " \ 'a': {
-      " \ 'description': ['  Search Files         '],
-      " \ 'command': 'call TelescopeFileSearch()'
-      " \ },
-  " \ 'b': {
-      " \ 'description': ['  Open Recent Project  '],
-      " \ 'command': 'Telescope projects'
-      " \ },
-  " \ 'c': {
-      " \ 'description': ['ﭯ  Search History       '],
-      " \ 'command': 'DashboardFindHistory'
-      " \ },
-  " \ 'd': {
-      " \ 'description': ['  Open Config          '],
-      " \ 'command': 'call OpenConfig()'
-      " \ },
-  " \ }
+" \ 'a': {
+"   \ 'description': ['  Search Files         '],
+"   \ 'command': 'call TelescopeFileSearch()'
+"   \ },
+" \ 'b': {
+"   \ 'description': ['  Open Recent Project  '],
+"   \ 'command': 'Telescope projects'
+"   \ },
+" \ 'c': {
+"   \ 'description': ['ﭯ  Search History       '],
+"   \ 'command': 'DashboardFindHistory'
+"   \ },
+" \ 'd': {
+"   \ 'description': ['  Open Config          '],
+"   \ 'command': 'call OpenConfig()'
+"   \ },
+" \ }
 
 function OpenConfig() abort
-  cd ~/.config/nvim 
+  cd $NVIMCONFIG
   call TelescopeFileSearch()
 endfunction
 

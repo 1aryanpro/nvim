@@ -10,6 +10,9 @@ set mouse=a
 syntax on
 set noshowmode
 
+" Dev Icons
+set encoding=UTF-8
+
 " Completion Menu
 set completeopt=menuone,noselect
 
@@ -30,10 +33,7 @@ set nobackup
 set nowritebackup
 
 " Text Wrapping
-set wrap
 set linebreak
-set textwidth=0
-set wrapmargin=0
 
 " Line Number Specifications
 set number
