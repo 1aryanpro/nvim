@@ -12,18 +12,17 @@ for _, sign in ipairs(signs) do
 end
 
 local config = {
-  virtual_text = true, --toggle if annoying
+  virtual_text = false, --toggle if annoying
   signs = {
     active = signs,
   },
-  update_in_insert = true,
   underline = true,
   severity_sort = true,
 }
 
 vim.diagnostic.config(config)
 
-local on_attach = function(client, bufnr)
+local on_attach = function(client, _)
   if client.name == "tsserver" then
     client.resolved_capabilities.document_formatting = false
   end
@@ -43,6 +42,11 @@ lsp_installer.on_server_ready(function(server)
   if server.name == "sumneko_lua" then
     local sumneko_opts = require("lspConfig.settings.sumneko_lua")
     opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
+  end
+
+  if server.name == "jsonls" then
+    local jsonls_opts = require("lspConfig.settings.jsonls")
+    opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
   end
 
   server:setup(opts)
