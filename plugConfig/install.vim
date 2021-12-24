@@ -12,7 +12,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'unblevable/quick-scope'
 Plug 'metakirby5/codi.vim'
 Plug 'numToStr/Comment.nvim'
-Plug 'github/copilot.vim'
 
 " Indentation
 Plug 'Yggdroot/indentLine'
@@ -50,8 +49,9 @@ Plug 'braindead-cc/bf-vim'
 " FT: kitty conf
 Plug 'fladson/vim-kitty'
 
-" LSP: setup
+" Language Server Protocol
 Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
 
 " Intellisense
 Plug 'hrsh7th/nvim-cmp'
@@ -59,7 +59,6 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/cmp-copilot'
 Plug 'f3fora/cmp-spell'
 
 " Snippets
