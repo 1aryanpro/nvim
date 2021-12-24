@@ -1,6 +1,6 @@
 require'lualine'.setup {
   options = {
-    theme = 'onedark',
+    theme = 'auto',
     disabled_filetypes = {'which_key'},
     component_separators = { left = ''}
   },

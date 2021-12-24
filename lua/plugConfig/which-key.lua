@@ -27,6 +27,7 @@ local leader_map = {
 	[";"] = { "Open Dashboard" },
 	["/"] = { "+Comment" },
 	["//"] = { "Comment Line" },
+	["<Space>"] = { "Telescope Find Files" },
 	-- ["?"] = { "+BlockComment" },
 	-- ["??"] = { "BlockComment Line" },
 

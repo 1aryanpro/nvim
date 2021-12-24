@@ -10,11 +10,11 @@ nnoremap <silent> <Leader>nf <cmd>DashboardNewFile<CR>
 
 let g:dashboard_custom_section={
 \ 'a': {
-  \ 'description': ['  Search Files         '],
+  \ 'description': ['  Search Files'],
   \ 'command': 'call TelescopeFileSearch()'
   \ },
 \ 'd': {
-  \ 'description': ['  Open Config          '],
+  \ 'description': ['  Open Config '],
   \ 'command': 'call OpenConfig()'
   \ },
 \ }
@@ -23,3 +23,12 @@ function OpenConfig() abort
   cd $NVIMCONFIG
   call TelescopeFileSearch()
 endfunction
+
+let g:dashboard_custom_header = [
+\ ' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
+\ ' ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
+\ ' ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
+\ ' ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║',
+\ ' ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
+\ ' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
+\]

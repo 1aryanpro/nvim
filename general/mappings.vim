@@ -8,7 +8,7 @@ nnoremap <leader>s <cmd>source $NVIMCONFIG/init.vim<cr>
 
 " copy to clipboard
 nnoremap <leader>yf <cmd>%y+<cr>
-nnoremap <leader>yy :normal! "+yy<cr>
+nnoremap <leader>yy <cmd>normal! "+yy<cr>
 
 " ctrl+direction to window movement
 nnoremap <C-h> <C-w>h
