@@ -1,4 +1,4 @@
-local lsp_installer = require("nvim-lsp-installer")
+local lsp_installer = require('nvim-lsp-installer')
 
 local signs = {
   { name = "DiagnosticSignError", text = "" },

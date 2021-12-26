@@ -21,7 +21,6 @@ source $NVIMCONFIG/plugConfig/misc.vim
 
 lua require 'plugConfig'
 
-source $NVIMCONFIG/plugConfig/lsp-mappings.vim
+lua require 'lspConfig.mappings'
+
 luafile $NVIMCONFIG/lua/lspConfig/lsp-installer.lua
-" luafile $NVIMCONFIG/lua/lspConfig/init.lua
-" source $NVIMCONFIG/plugConfig/lsp-config.vim
