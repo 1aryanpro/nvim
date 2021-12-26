@@ -53,6 +53,7 @@ Plug 'fladson/vim-kitty'
 " Language Server Protocol
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 
 " Intellisense
 Plug 'hrsh7th/nvim-cmp'
