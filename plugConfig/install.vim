@@ -8,9 +8,10 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'glepnir/dashboard-nvim'
 
 " Utility
+Plug 'norcalli/nvim_utils'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'unblevable/quick-scope'
-Plug 'metakirby5/codi.vim'
 Plug 'numToStr/Comment.nvim'
 
 " Indentation
@@ -19,12 +20,12 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Status Line
 Plug 'hoob3rt/lualine.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
 
 " Telescope Fuzzy Finder
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'ahmedkhalf/project.nvim'
 
 " Treesitter
@@ -58,8 +59,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'f3fora/cmp-spell'
+" Plug 'f3fora/cmp-spell'
 
 " Snippets
 Plug 'hrsh7th/cmp-vsnip'

@@ -1,31 +1,3 @@
-lua << EOF
-telescope = require('telescope')
-sorters = require('telescope.sorters')
-actions = require('telescope.actions')
-
-telescope.setup {
-  defaults = {
-    file_ignore_patterns = {"node_modules"},
-    file_sorter = sorters.get_fzy_sorter,
-    color_devicons = true,
-    preview = {treesitter = true},
-  },
-
-  pickers = {
-    find_files = {
-      hidden = true
-    },
-    file_browser = {
-      hidden = true
-    }
-  },
-}
-
-
-require("project_nvim").setup {}
-telescope.load_extension('projects')
-EOF
-
 function TelescopeFileSearch() abort
   if isdirectory(".git")
     execute "Telescope git_files"
@@ -36,9 +8,9 @@ endfunction
 
 command! -nargs=0 TelescopeFileSearch :call TelescopeFileSearch()
 
-nnoremap <leader>fb <cmd>Telescope file_browser<cr><esc>
+nnoremap <leader>fb <cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>
 nnoremap <leader>fu <cmd>Telescope buffers<cr>
 nnoremap <leader>fp <cmd>Telescope projects<cr>
-nnoremap <leader>ff <cmd>TelescopeFileSearch<cr>
 
+nnoremap <leader>ff <cmd>TelescopeFileSearch<cr>
 nnoremap <leader><Space> <cmd>TelescopeFileSearch<cr>
