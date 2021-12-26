@@ -23,7 +23,6 @@ local leader_map = {
 	s = { "Source Config" },
 	t = { "Open Integrated Terminal" },
 	z = { "Goyo Zen Mode" },
-	["nf"] = { "New File" },
 	[";"] = { "Open Dashboard" },
 	["/"] = { "+Comment" },
 	["//"] = { "Comment Line" },
@@ -54,7 +53,7 @@ local leader_map = {
 	c = {
 		name = "+ColorSchemes",
 		c = { "Change Color Scheme" },
-		s = { "Toggle OneDark" },
+		-- s = { "Toggle OneDark" },
 	},
 
 	y = {

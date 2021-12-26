@@ -6,7 +6,6 @@ nnoremap <silent> <Leader>fh <cmd>DashboardFindHistory<CR>
 nnoremap <silent> <Leader>cc <cmd>DashboardChangeColorscheme<CR>
 nnoremap <silent> <Leader>fa <cmd>DashboardFindWord<CR>
 nnoremap <silent> <Leader>fm <cmd>DashboardJumpMark<CR>
-nnoremap <silent> <Leader>nf <cmd>DashboardNewFile<CR>
 
 let g:dashboard_custom_section={
 \ 'a': {

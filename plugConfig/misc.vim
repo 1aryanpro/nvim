@@ -1,7 +1,6 @@
 " Colorscheme setup
 let g:onedark_style = 'dark'
 colorscheme onedark
-let g:onedark_toggle_style_keymap = '<nop>'
 
 " Use JSX syntax highlighting for TSX files
 autocmd BufRead,BufNewFile *.tsx setlocal syntax=javascript.jsx

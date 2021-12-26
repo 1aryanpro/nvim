@@ -65,10 +65,10 @@ cmp.setup({
       -- Kind icons
       vim_item.kind = string.format('%s', kind_icons[vim_item.kind])
       vim_item.menu = ({
-        vsnip = "[Snippet]",
-        buffer = "[Buffer]",
-        path = "[Path]",
         nvim_lsp = "[LSP]",
+        vsnip = "[Snippet]",
+        path = "[Path]",
+        buffer = "[Buffer]",
       })[entry.source.name]
       return vim_item
     end,
@@ -78,7 +78,5 @@ cmp.setup({
     { name = 'vsnip' },
     { name = 'path' },
     { name = 'buffer' },
-    { name = 'cmdline' },
-    { name = 'spell' },
   })
 })
