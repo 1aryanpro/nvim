@@ -19,10 +19,7 @@ source $NVIMCONFIG/plugConfig/telescope.vim
 source $NVIMCONFIG/plugConfig/goyo.vim
 source $NVIMCONFIG/plugConfig/misc.vim
 
-luafile $NVIMCONFIG/lua/plugConfig/lualine.lua
-luafile $NVIMCONFIG/lua/plugConfig/cmp-config.lua
-luafile $NVIMCONFIG/lua/plugConfig/commenter.lua
-luafile $NVIMCONFIG/lua/plugConfig/which-key.lua
+lua require 'plugConfig'
 
 source $NVIMCONFIG/plugConfig/lsp-mappings.vim
 luafile $NVIMCONFIG/lua/lspConfig/lsp-installer.lua

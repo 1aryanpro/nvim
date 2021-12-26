@@ -1,0 +1,5 @@
+require 'plugConfig.lualine'
+require 'plugConfig.cmp-config'
+require 'plugConfig.commenter'
+require 'plugConfig.which-key'
+require 'plugConfig.telescope'
