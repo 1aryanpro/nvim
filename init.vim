@@ -2,8 +2,10 @@
 "  vim config 
 " ------------
 
+lua require 'general.options'
+lua require 'general.mappings'
 source $NVIMCONFIG/general/config.vim
-source $NVIMCONFIG/general/mappings.vim
+" source $NVIMCONFIG/general/mappings.vim
 
 " ----------
 "  vim_plug 
