@@ -1,14 +1,4 @@
-" ------------
-"  vim config 
-" ------------
-
-lua require 'general.options'
-lua require 'general.mappings'
-source $NVIMCONFIG/general/config.vim
-
-" ----------
-"  vim_plug 
-" ----------
+lua require 'user'
 
 source $NVIMCONFIG/plugConfig/install.vim
 source $NVIMCONFIG/plugConfig/dashboard.vim
@@ -18,5 +8,5 @@ source $NVIMCONFIG/plugConfig/telescope.vim
 source $NVIMCONFIG/plugConfig/goyo.vim
 source $NVIMCONFIG/plugConfig/misc.vim
 
-lua require 'plugConfig'
-lua require 'lspConfig.all'
+lua require 'plugins'
+lua require 'lsp.all'

@@ -1,5 +1,5 @@
 local lsp_installer = require 'nvim-lsp-installer'
-local handlers = require 'lspConfig.handlers'
+local handlers = require 'lsp.handlers'
 
 handlers.setup()
 
@@ -10,12 +10,12 @@ lsp_installer.on_server_ready(function(server)
   }
 
   if server.name == "sumneko_lua" then
-    local sumneko_opts = require("lspConfig.settings.sumneko_lua")
+    local sumneko_opts = require("lsp.settings.sumneko_lua")
     opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
   end
 
   if server.name == "jsonls" then
-    local jsonls_opts = require("lspConfig.settings.jsonls")
+    local jsonls_opts = require("lsp.settings.jsonls")
     opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
   end
 
