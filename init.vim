@@ -5,7 +5,6 @@
 lua require 'general.options'
 lua require 'general.mappings'
 source $NVIMCONFIG/general/config.vim
-" source $NVIMCONFIG/general/mappings.vim
 
 " ----------
 "  vim_plug 
@@ -20,7 +19,4 @@ source $NVIMCONFIG/plugConfig/goyo.vim
 source $NVIMCONFIG/plugConfig/misc.vim
 
 lua require 'plugConfig'
-
-lua require 'lspConfig.mappings'
-
-luafile $NVIMCONFIG/lua/lspConfig/lsp-installer.lua
+lua require 'lspConfig.all'
