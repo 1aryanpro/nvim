@@ -9,7 +9,7 @@ end
 return require('packer').startup(function()
   -- Color Theme
   use 'navarasu/onedark.nvim'
-  use {'dracula/vim', as = 'dracula' }
+  use { 'dracula/vim', as = 'dracula' }
 
   -- Dashboard
   use 'glepnir/dashboard-nvim'

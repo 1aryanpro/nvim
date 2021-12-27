@@ -34,3 +34,16 @@ telescope.setup {
 
 telescope.load_extension('projects')
 telescope.load_extension('file_browser')
+
+vim.cmd([[
+function TelescopeFileSearch() abort
+  if isdirectory(".git")
+    execute "Telescope git_files"
+  else
+    execute "Telescope find_files"
+  endif
+endfunction
+
+command! -nargs=0 TelescopeFileSearch :call TelescopeFileSearch()
+]])
+
