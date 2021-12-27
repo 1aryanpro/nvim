@@ -1,3 +1,4 @@
+-- Spellcheck md and txt files
 vim.cmd [[
   augroup _spellFile
     au!

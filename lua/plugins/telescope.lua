@@ -3,8 +3,6 @@ local sorters = require('telescope.sorters')
 local actions = require('telescope.actions')
 
 require("project_nvim").setup {}
-telescope.load_extension('projects')
-telescope.load_extension('file_browser')
 
 telescope.setup {
   defaults = {
@@ -23,8 +21,16 @@ telescope.setup {
   },
   extensions = {
     file_browser = {
-      hidden = true
+      hidden = true,
+      respect_gitignore = true,
+      mappings = {
+        ['n'] = {
+          ['<Space>'] = actions.toggle_selection
+        }
+      }
     },
   },
 }
 
+telescope.load_extension('projects')
+telescope.load_extension('file_browser')
