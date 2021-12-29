@@ -3,11 +3,11 @@ vim.g.dashboard_default_executive = 'telescope'
 vim.g.dashboard_custom_section = {
   a = {
     description = {'  Search Files'},
-    command = 'call TelescopeFileSearch()'
+    command = vim.fn.TelescopeFileSearch
   },
   d = {
     description = {'  Open Config '},
-    command = 'call OpenConfig()'
+    command = vim.fn.OpenConfig
   },
 }
 

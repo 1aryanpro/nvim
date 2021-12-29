@@ -1,3 +1,4 @@
+lua require 'utils'
 lua require 'user'
 lua require 'plugins'
 lua require 'lsp.all'

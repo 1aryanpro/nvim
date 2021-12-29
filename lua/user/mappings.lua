@@ -1,15 +1,4 @@
-local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
-
-local function noremap(from, to)
-  keymap("", from, to, opts)
-end
-
-local function nnoremap(from, to)
-  keymap("n", from, to, opts)
-end
-
-keymap("", "<Space>", "<Nop>", opts)
+noremap("<Space>", "<Nop>")
 vim.g.mapleader = " "
 
 nnoremap('<leader>h', '<cmd>noh<cr>') -- better searching
@@ -38,8 +27,8 @@ noremap('0', 'g0')
 noremap('$', 'g$')
 
 -- Better Tabbing
-keymap("v", "<Tab>", ">gv", opts)
-keymap("v", "<S-Tab>", "<gv", opts)
+vnoremap("<Tab>", ">gv")
+vnoremap("<S-Tab>", "<gv")
 
 -- Terminal Mappings
 nnoremap("<leader>t", "<C-w>s<C-w>j<cmd>terminal<cr><C-w>L<cmd>vert res 60")

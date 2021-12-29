@@ -1,10 +1,3 @@
-local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
-
-local function nnoremap(from, to)
-  keymap("n", from, to, opts)
-end
-
 -- Dashboard
 nnoremap("<Leader>;", "<cmd>Dashboard<CR>")
 nnoremap("<Leader>fh", "<cmd>DashboardFindHistory<CR>")
@@ -13,11 +6,27 @@ nnoremap("<Leader>fa", "<cmd>DashboardFindWord<CR>")
 nnoremap("<Leader>fm", "<cmd>DashboardJumpMark<CR>")
 
 -- Telescope
-nnoremap('<leader>fb', '<cmd>lua require \'telescope\'.extensions.file_browser.file_browser()<CR>')
+nnoremap('<leader>fb', '<cmd>lua require "telescope".extensions.file_browser.file_browser()<cr>')
 nnoremap('<leader>fu', '<cmd>Telescope buffers<cr>')
-nnoremap('<leader>fp', '<cmd>Telescope projects<cr>')
-nnoremap('<leader>ff', '<cmd>TelescopeFileSearch<cr>')
-nnoremap('<leader><Space>', '<cmd>TelescopeFileSearch<cr>')
+
+function _G.TelescopeFileSearch()
+  local theme = ''
+  if vim.fn.winwidth(0) < 100 then
+    theme = ' theme=dropdown'
+  end
+   if vim.fn.isdirectory('.git') then
+    return ':Telescope git_files' .. theme
+  else
+    return ':Telescope find_files' .. theme
+  end
+end
+vim.cmd([[
+function TelescopeFileSearch() abort
+  execute v:lua.TelescopeFileSearch()
+endfunction
+]])
+
+nnoremap('<leader>ff', '<cmd>call TelescopeFileSearch()<cr>')
 
 -- Goyo
 nnoremap('<leader>z', '<cmd>Goyo<cr>')
