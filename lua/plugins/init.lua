@@ -1,6 +1,7 @@
 require 'plugins.packer'
 require 'plugins.mappings'
 
+require 'plugins.autopairs'
 require 'plugins.cmp-config'
 require 'plugins.commenter'
 require 'plugins.dashboard'

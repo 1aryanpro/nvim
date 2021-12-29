@@ -2,8 +2,6 @@ local telescope = require('telescope')
 local sorters = require('telescope.sorters')
 local actions = require('telescope.actions')
 
-require("project_nvim").setup {}
-
 telescope.setup {
   defaults = {
     file_ignore_patterns = {"node_modules"},
@@ -29,21 +27,14 @@ telescope.setup {
         }
       }
     },
+    -- fzf = {
+    --   fuzzy = true,
+    --   override_generic_sorter = true,
+    -- },
   },
 }
 
-telescope.load_extension('projects')
-telescope.load_extension('file_browser')
+telescope.load_extension 'file_browser'
+telescope.load_extension 'fzf'
 
-vim.cmd([[
-function TelescopeFileSearch() abort
-  if isdirectory(".git")
-    execute "Telescope git_files"
-  else
-    execute "Telescope find_files"
-  endif
-endfunction
-
-command! -nargs=0 TelescopeFileSearch :call TelescopeFileSearch()
-]])
 
