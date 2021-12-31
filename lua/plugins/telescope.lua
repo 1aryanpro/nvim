@@ -1,6 +1,7 @@
 local telescope = require('telescope')
 local sorters = require('telescope.sorters')
 local actions = require('telescope.actions')
+local builtin = require('telescope.builtin')
 
 telescope.setup {
   defaults = {
@@ -27,14 +28,23 @@ telescope.setup {
         }
       }
     },
-    -- fzf = {
-    --   fuzzy = true,
-    --   override_generic_sorter = true,
-    -- },
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+    },
   },
 }
 
 telescope.load_extension 'file_browser'
 telescope.load_extension 'fzf'
 
+function _G.TelescopeProjectFiles()
+  local ok = pcall(require"telescope.builtin".git_files)
+  if not ok then require"telescope.builtin".find_files() end
+end
 
+vim.cmd([[
+function TelescopeProjectFiles() abort
+  lua TelescopeProjectFiles()
+endfunction
+]])

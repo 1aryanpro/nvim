@@ -3,7 +3,7 @@ vim.g.dashboard_default_executive = 'telescope'
 vim.g.dashboard_custom_section = {
   a = {
     description = {'  Search Files'},
-    command = vim.fn.TelescopeFileSearch
+    command = vim.fn.TelescopeProjectFiles
   },
   d = {
     description = {'  Open Config '},
@@ -14,7 +14,7 @@ vim.g.dashboard_custom_section = {
 vim.cmd([[
 function OpenConfig() abort
   cd $NVIMCONFIG
-  call TelescopeFileSearch()
+  call TelescopeProjectFiles()
 endfunction
 ]])
 
