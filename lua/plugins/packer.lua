@@ -31,7 +31,12 @@ return require('packer').startup(function()
   use 'lukas-reineke/indent-blankline.nvim'
 
   -- Telescope Fuzzy Finder
-  use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim', 'kyazdani42/nvim-web-devicons'}}
+  use {'nvim-telescope/telescope.nvim',
+    requires = {
+      'nvim-lua/popup.nvim',
+      'nvim-lua/plenary.nvim',
+      'kyazdani42/nvim-web-devicons'
+  }}
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make', requires = 'nvim-telescope/telescope.nvim' }
   use {'nvim-telescope/telescope-file-browser.nvim', requires = 'nvim-telescope/telescope.nvim'}
 
@@ -59,6 +64,6 @@ return require('packer').startup(function()
 
   -- Snippets
   use 'hrsh7th/vim-vsnip'
-  use {'rafamadriz/friendly-snippets', requires = 'hrsh7th/vim-vsnip'}
+  use 'rafamadriz/friendly-snippets'
 end)
 

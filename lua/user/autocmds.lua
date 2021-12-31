@@ -5,3 +5,4 @@ vim.cmd [[
     au FileType markdown,text setlocal spell
   augroup end
 ]]
+
