@@ -1,7 +1,7 @@
 -- Misc
 vim.opt.mouse = 'a'
 vim.opt.linebreak = true -- text wrapping
-vim.opt.scrolloff = 5
+vim.opt.scrolloff = 3
 vim.opt.spelllang = 'en_us'
 vim.opt.encoding = 'UTF-8'
 vim.opt.completeopt = { 'menuone', 'noselect' }
