@@ -15,6 +15,7 @@ return require('packer').startup(function()
   use 'unblevable/quick-scope'
   use { 'hoob3rt/lualine.nvim', requires = 'kyazdani42/nvim-web-devicons'}
   use 'folke/which-key.nvim'
+  use 'lewis6991/impatient.nvim'
 
   -- Colors
   use 'navarasu/onedark.nvim'
