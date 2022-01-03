@@ -9,11 +9,11 @@ end
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- Packer can manage itself
 
-  -- Utility
+  -- Misc
   use 'glepnir/dashboard-nvim'
   use 'airblade/vim-gitgutter'
   use 'unblevable/quick-scope'
-  use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons'}}
+  use { 'hoob3rt/lualine.nvim', requires = 'kyazdani42/nvim-web-devicons'}
   use 'folke/which-key.nvim'
 
   -- Colors
@@ -55,7 +55,7 @@ return require('packer').startup(function()
   use 'williamboman/nvim-lsp-installer'
   use 'jose-elias-alvarez/null-ls.nvim'
 
-  -- Intellisense
+  -- Autocomplete
   use 'hrsh7th/nvim-cmp'
   use {'hrsh7th/cmp-nvim-lsp', requires = 'hrsh7th/nvim-cmp'}
   use {'hrsh7th/cmp-buffer', requires = 'hrsh7th/nvim-cmp'}

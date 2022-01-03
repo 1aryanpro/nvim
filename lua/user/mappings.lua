@@ -6,7 +6,7 @@ nnoremap('<leader>s', '<cmd>source $NVIMCONFIG/init.vim<cr>') -- auto source
 
 -- copy to clipboard
 nnoremap('<leader>yf', '<cmd>%y+<cr>')
-nnoremap('<leader>yy', '<cmd>normal! "+yy')
+nnoremap('<leader>yy', '<cmd>normal! "+yy<cr>')
 
 -- ctrl+direction to window movement
 nnoremap('<C-h>', '<C-w>h')

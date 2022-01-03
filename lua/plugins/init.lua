@@ -3,7 +3,7 @@ require 'plugins.mappings'
 
 require 'plugins.autopairs'
 require 'plugins.cmp-config'
-require 'plugins.commenter'
+require 'plugins.comment'
 require 'plugins.dashboard'
 require 'plugins.gitgutter'
 require 'plugins.goyo'

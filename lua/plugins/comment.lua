@@ -1,4 +1,5 @@
-require('Comment').setup({
+local comment  = require 'Comment'
+comment.setup({
   toggler = {
     line = '<leader>//',
     block = '<leader>??'
@@ -6,5 +7,5 @@ require('Comment').setup({
   opleader = {
     line = '<leader>/',
     block = '<leader>?'
-  }
+  },
 })
