@@ -25,6 +25,7 @@ return require('packer').startup(function()
   use 'windwp/nvim-autopairs'
   use 'tpope/vim-surround'
   use 'numToStr/Comment.nvim'
+  use { 'JoosepAlviste/nvim-ts-context-commentstring', requires = 'nvim-treesitter/nvim-treesitter'}
 
   -- Indentation
   use 'Yggdroot/indentLine'
