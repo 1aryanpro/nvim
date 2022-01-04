@@ -1,4 +1,5 @@
 require 'plugins.packer'
+
 require 'plugins.impatient'
 require 'plugins.mappings'
 

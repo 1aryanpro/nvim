@@ -1,7 +1,7 @@
-local telescope = require('telescope')
-local sorters = require('telescope.sorters')
-local actions = require('telescope.actions')
-local builtin = require('telescope.builtin')
+local telescope = require 'telescope'
+local sorters = require 'telescope.sorters'
+local actions = require 'telescope.actions'
+local builtin = require 'telescope.builtin'
 
 telescope.setup {
   defaults = {
