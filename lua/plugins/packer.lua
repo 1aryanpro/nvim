@@ -62,10 +62,10 @@ return require('packer').startup(function()
   use {'hrsh7th/cmp-nvim-lsp', requires = 'hrsh7th/nvim-cmp'}
   use {'hrsh7th/cmp-buffer', requires = 'hrsh7th/nvim-cmp'}
   use {'hrsh7th/cmp-path', requires = 'hrsh7th/nvim-cmp'}
-  use {'hrsh7th/cmp-vsnip', requires = 'hrsh7th/nvim-cmp'}
+  use {'saadparwaiz1/cmp_luasnip', requires = 'hrsh7th/nvim-cmp'}
 
   -- Snippets
-  use 'hrsh7th/vim-vsnip'
-  use 'rafamadriz/friendly-snippets'
+  use 'L3MON4D3/LuaSnip'
+  use "rafamadriz/friendly-snippets"
 end)
 

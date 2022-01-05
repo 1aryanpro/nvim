@@ -1,4 +1,6 @@
 local cmp = require 'cmp'
+local luasnip = require 'luasnip'
+require("luasnip/loaders/from_vscode").lazy_load()
 
 local kind_icons = {
   Text = "",
@@ -28,10 +30,15 @@ local kind_icons = {
   TypeParameter = "",
 }
 
+local check_backspace = function()
+  local col = vim.fn.col "." - 1
+  return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+end
+
 cmp.setup({
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
+      require('luasnip').lsp_expand(args.body)
     end,
   },
   mapping = {
@@ -44,20 +51,34 @@ cmp.setup({
       c = cmp.mapping.close(),
     }),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ['<Tab>'] = function(fallback)
+        ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
+      elseif luasnip.expandable() then
+        luasnip.expand()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      elseif check_backspace() then
+        fallback()
       else
         fallback()
       end
-    end,
-    ['<S-Tab>'] = function(fallback)
+    end, {
+      "i",
+      "s",
+    }),
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
       else
         fallback()
       end
-    end,
+    end, {
+      "i",
+      "s",
+    }),
   },
     formatting = {
     fields = { "kind", "abbr", "menu" },
@@ -66,7 +87,7 @@ cmp.setup({
       vim_item.kind = string.format('%s', kind_icons[vim_item.kind])
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
-        vsnip = "[Snippet]",
+        luasnip = "[Snippet]",
         path = "[Path]",
         buffer = "[Buffer]",
       })[entry.source.name]
@@ -75,7 +96,7 @@ cmp.setup({
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'vsnip' },
+    { name = 'luasnip' },
     { name = 'path' },
     { name = 'buffer' },
   })
