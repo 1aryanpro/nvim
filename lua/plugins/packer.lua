@@ -51,11 +51,6 @@ return require('packer').startup(function()
   use {'braindead-cc/bf-vim', ft = 'brainfsck'}
   use {'fladson/vim-kitty', ft = 'kitty'}
 
-  -- FT Markdown
-  use {'instant-markdown/vim-instant-markdown', ft = 'markdown', run = 'yarn install'}
-  use 'godlygeek/tabular'
-  use 'plasticboy/vim-markdown'
-
   -- Language Server Protocol
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
