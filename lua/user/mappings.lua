@@ -28,7 +28,3 @@ noremap('$', 'g$')
 -- Better Tabbing
 vnoremap("<Tab>", ">gv")
 vnoremap("<S-Tab>", "<gv")
-
--- Terminal Mappings
-nnoremap("<leader>t", "<C-w>s<C-w>j<cmd>terminal<cr><C-w>L<cmd>vert res 60")
-keymap('t', '<Esc>', '<C-\\><C-n>', opts)
