@@ -5,7 +5,6 @@ vim.opt.scrolloff = 3
 vim.opt.spelllang = 'en_us'
 vim.opt.encoding = 'UTF-8'
 vim.opt.completeopt = { 'menuone', 'noselect' }
-vim.opt.smartcase = true
 
 -- splits
 vim.opt.splitright = true

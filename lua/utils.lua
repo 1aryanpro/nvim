@@ -24,3 +24,12 @@ end
 function _G.t(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
+
+function _G.prequire(moduleName)
+  local status, moduleObj = pcall(require, moduleName)
+  if not status then
+    return nil
+  else
+    return moduleObj
+  end
+end
