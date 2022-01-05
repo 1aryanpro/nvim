@@ -1,2 +1,10 @@
-# NeoVim Configuration
-This is a heavily opinionated Neovim configuration, use at your own risk; this sort of setup does not work for everyone. I will be re-writing all of my files in lua and improving the organization in the future.
+# Neovim Configuration
+This is my neovim configuration that I've been working on for quite a while. It is heavily opinionated so it may not work for everybody, but it's packed with all the features for editing most types of files. I'm always working on and updating it, but there are circumstances where I remove functionality because I stop using it.
+
+To get the full features of this config you need:
+* neovim nightly
+* node and npm
+  * for LSP
+* `export NVIMCONFIG="$HOME/.config/nvim"` in your shell's rc
+  * edit if your nvim config folder is in a different location
+
