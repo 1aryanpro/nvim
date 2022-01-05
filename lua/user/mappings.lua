@@ -1,8 +1,7 @@
-noremap("<Space>", "<Nop>")
+noremap("<Space>", "<Nop>") -- Space for leader key
 vim.g.mapleader = " "
 
 nnoremap('<leader>h', '<cmd>noh<cr>') -- better searching
-nnoremap('<leader>s', '<cmd>source $NVIMCONFIG/init.vim<cr>') -- auto source
 
 -- copy to clipboard
 nnoremap('<leader>yf', '<cmd>%y+<cr>')

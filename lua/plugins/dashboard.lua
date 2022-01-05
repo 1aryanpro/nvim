@@ -13,7 +13,7 @@ vim.g.dashboard_custom_section = {
 
 vim.cmd([[
 function OpenConfig() abort
-  cd $NVIMCONFIG
+  cd ~/.config/nvim/
   call TelescopeProjectFiles()
 endfunction
 ]])
