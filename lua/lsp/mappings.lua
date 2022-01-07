@@ -7,8 +7,9 @@ nnoremap('K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 
 nnoremap('<leader>lk', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
 nnoremap('<leader>lf', '<cmd>lua vim.lsp.buf.formatting_sync()<CR>')
-nnoremap('<leader>lp', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
-nnoremap('<leader>ln', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 nnoremap('<leader>lr', '<cmd>lua vim.lsp.buf.rename()<CR>')
 nnoremap('<leader>la', '<cmd>lua vim.lsp.buf.code_action()<CR>')
+
+nnoremap('[g', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
+nnoremap(']g', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 

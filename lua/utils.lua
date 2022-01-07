@@ -1,7 +1,7 @@
 local opts = { noremap = true, silent = true }
 function _G.keymap(mode, from, to, copts)
   if copts == nil then copts = {} end
-  copts = vim.tbl_deep_extend('force', copts, opts)
+  copts = vim.tbl_deep_extend('force', opts, copts)
   vim.api.nvim_set_keymap(mode, from, to, copts)
 end
 
