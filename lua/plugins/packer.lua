@@ -66,7 +66,7 @@ return require('packer').startup(function()
   -- Snippets
   use 'L3MON4D3/LuaSnip'
   use 'rafamadriz/friendly-snippets'
-  
+
   local customPlugins = prequire('customConfig.plugins')
   if customPlugins ~= nil then
     for _, plugin in customPlugins do

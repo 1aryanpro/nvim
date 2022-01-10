@@ -1,2 +1,2 @@
 impatient = require 'impatient'
-impatient.enable_profile()
+-- impatient.enable_profile()
