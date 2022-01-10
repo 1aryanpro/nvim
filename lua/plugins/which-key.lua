@@ -4,15 +4,7 @@ wk.setup({
 	icons = {
 		separator = "➜ ",
 	},
-	operators = {
-		["<leader>/"] = "Comment",
-		["<leader>?"] = "BlockComment",
-	},
 	ignore_missing = true,
-  spelling = {
-    enabled = true,
-    suggestions = 10,
-  },
 	layout = {
 		align = "center",
 	}
@@ -64,3 +56,21 @@ local leader_map = {
 }
 
 wk.register(leader_map, { prefix = "<leader>" })
+
+
+local g_map = {
+	d = { "Goto Definition" },
+	D = { "Goto Declaration" },
+	l = { "View Diagnostic" },
+	r = { "See References" },
+	c = {
+		name = "+Comment",
+		c = "Current Line",
+	},
+	b = {
+		name = "+BlockComment",
+		c = "Current Line",
+	},
+}
+
+wk.register(g_map, {prefix = "g"})
