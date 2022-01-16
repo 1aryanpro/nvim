@@ -9,6 +9,7 @@ treesitter.setup {
 }
 
 comment.setup({
+  ignore = '^$',
   toggler = {
     line = '<leader>//',
     block = '<leader>??'
