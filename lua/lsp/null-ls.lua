@@ -13,6 +13,6 @@ null_ls.setup {
         return utils.root_has_file { 'stylua.toml', '.stylua.toml' }
       end,
     },
-    diagnostics.flake8,
+    formatting.clang_format,
   },
 }

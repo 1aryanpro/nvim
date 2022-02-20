@@ -25,7 +25,7 @@ M.setup = function()
 end
 
 M.on_attach = function(client, _)
-  if client.name == "tsserver" then
+  if client.name == "tsserver" or client.name == "denols" or client.name == "pylsp" then
     client.resolved_capabilities.document_formatting = false
   end
 end
