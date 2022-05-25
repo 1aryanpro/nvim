@@ -8,11 +8,6 @@ null_ls.setup {
   sources = {
     formatting.prettier.with { extra_args = { '--single-quote', '--jsx-single-quote' } },
     formatting.black.with { extra_args = { '--fast' } },
-    formatting.stylua.with {
-      condition = function(utils)
-        return utils.root_has_file { 'stylua.toml', '.stylua.toml' }
-      end,
-    },
     formatting.clang_format,
   },
 }
