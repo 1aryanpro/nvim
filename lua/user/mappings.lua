@@ -1,4 +1,4 @@
-noremap("<Space>", "<Nop>") -- Space for leader key
+noremap('<Space>', '<Nop>') -- Space for leader key
 vim.g.mapleader = " "
 
 nnoremap('<leader>h', '<cmd>noh<cr>') -- better searching
@@ -26,5 +26,5 @@ noremap('0', 'g0')
 noremap('$', 'g$')
 
 -- Better Tabbing
-vnoremap("<Tab>", ">gv")
-vnoremap("<S-Tab>", "<gv")
+vnoremap('<Tab>', '>gv')
+vnoremap('<S-Tab>', '<gv')

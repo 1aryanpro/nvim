@@ -8,7 +8,7 @@ treesitter.setup {
   }
 }
 
-comment.setup({
+comment.setup {
   ignore = '^$',
   toggler = {
     line = '<leader>//',
@@ -34,4 +34,4 @@ comment.setup({
       location = location,
     }
   end,
-})
+}
