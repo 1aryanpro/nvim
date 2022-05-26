@@ -10,5 +10,3 @@ nnoremap('<leader>fb', '<cmd>lua require "telescope".extensions.file_browser.fil
 nnoremap('<leader>fu', '<cmd>Telescope buffers<cr>')
 nnoremap('<leader>ff', '<cmd>call TelescopeProjectFiles()<cr>')
 
--- Goyo
-nnoremap('<leader>z', '<cmd>Goyo<cr>')

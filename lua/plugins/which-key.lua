@@ -12,15 +12,10 @@ wk.setup({
 
 local leader_map = {
 	h = { "Remove Highlight" },
-	s = { "Source Config" },
 	t = { "Open Integrated Terminal" },
 	z = { "Goyo Zen Mode" },
 	[";"] = { "Open Dashboard" },
-	["/"] = { "+Comment" },
-	["//"] = { "Comment Line" },
 	["<Space>"] = { "Telescope Find Files" },
-	-- ["?"] = { "+BlockComment" },
-	-- ["??"] = { "BlockComment Line" },
 
 	l = {
 		name = "+LSP",
@@ -66,6 +61,9 @@ local g_map = {
 	c = {
 		name = "+Comment",
 		c = "Current Line",
+		o = "Next Line",
+		O = "Prev Line",
+		A = "End of Current Line",
 	},
 	b = {
 		name = "+BlockComment",

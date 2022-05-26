@@ -17,17 +17,16 @@ return require 'packer'.startup(function()
   use 'folke/which-key.nvim'
   use 'lewis6991/impatient.nvim'
   use 'gpanders/editorconfig.nvim'
+  use 'tpope/vim-repeat'
 
   -- Colors
   use 'navarasu/onedark.nvim'
-  use { 'dracula/vim', as = 'dracula' }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Delimiters
   use 'windwp/nvim-autopairs'
   use 'tpope/vim-surround'
   use 'numToStr/Comment.nvim'
-  use { 'JoosepAlviste/nvim-ts-context-commentstring', requires = 'nvim-treesitter/nvim-treesitter' }
 
   -- Indentation
   use 'Yggdroot/indentLine'
@@ -43,13 +42,8 @@ return require 'packer'.startup(function()
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', requires = 'nvim-telescope/telescope.nvim' }
   use { 'nvim-telescope/telescope-file-browser.nvim', requires = 'nvim-telescope/telescope.nvim' }
 
-  -- Focus Mode
-  use 'junegunn/goyo.vim'
-  use 'junegunn/limelight.vim'
-
   -- FT Plugins
   use 'sheerun/vim-polyglot' -- generic
-  use { 'braindead-cc/bf-vim', ft = 'brainfsck' }
   use { 'fladson/vim-kitty', ft = 'kitty' }
 
   -- Language Server Protocol
@@ -66,5 +60,6 @@ return require 'packer'.startup(function()
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'
+  use { 'rafamadriz/friendly-snippets', requires = 'L3MON4D3/LuaSnip' }
 
 end)
