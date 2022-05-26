@@ -3,4 +3,3 @@ require 'user'
 require 'plugins'
 require 'lsp.all'
 
-prequire 'customConfig'
