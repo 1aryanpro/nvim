@@ -3,8 +3,13 @@ vim.opt.mouse = 'a'
 vim.opt.linebreak = true -- text wrapping
 vim.opt.scrolloff = 3
 vim.opt.spelllang = 'en_us'
-vim.opt.encoding = 'UTF-8'
 vim.opt.completeopt = { 'menuone', 'noselect' }
+vim.opt.timeoutlen = 500
+
+-- characters
+vim.opt.listchars = { trail="·", tab="\\t" }
+vim.opt.list = true
+vim.opt.encoding = 'UTF-8'
 
 -- splits
 vim.opt.splitright = true
