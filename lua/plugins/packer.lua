@@ -1,7 +1,8 @@
 -- Automatically install packer if not installed
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = vim.fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path }
+  PACKER_BOOTSTRAP = vim.fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
+    install_path }
   print 'Installing packer close and reopen Neovim...'
   vim.cmd [[packadd packer.nvim]]
 end
@@ -27,6 +28,7 @@ return require 'packer'.startup(function()
   use 'windwp/nvim-autopairs'
   use 'tpope/vim-surround'
   use 'numToStr/Comment.nvim'
+  use 'norcalli/nvim-colorizer.lua'
 
   -- Indentation
   use 'Yggdroot/indentLine'
