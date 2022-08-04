@@ -1,16 +1,27 @@
 -- Spellcheck md and txt files
-vim.cmd [[
-  augroup _spellFiles
-    au!
-    au FileType markdown,text setlocal spell
-  augroup end
-]]
+local spellFiles = augroup('spellFiles', { clear = true })
+autocmd({ "FileType" }, {
+  pattern = { "markdown", "text" },
+  callback = function() vim.bo.spell = true end,
+  group = spellFiles,
+})
 
 -- Set Custom Filetypes
-vim.cmd [[
-  augroup customFileTypes
-    autocmd!
-    autocmd BufRead,BufNewFile *.tsx setlocal syntax=javascript.jsx filetype=typescript.typescriptreact
-    autocmd BufRead,BufNewFile kitty.conf setlocal filetype=kitty
-  augroup END
-]]
+local customFileTypes = augroup('customFileTypes', { clear = true })
+local bufChange = { "BufRead", "BufNewFile" }
+
+autocmd(bufChange, {
+  pattern = '*.tsx',
+  callback = function()
+    vim.bo.syntax = "javascript.jsx"
+    vim.bo.filetype = "typescript.typescriptreact"
+  end,
+  group = customFileTypes,
+})
+
+autocmd(bufChange, {
+  pattern = 'kitty.conf',
+  callback = function() vim.bo.filetype = "kitty" end,
+  group = customFileTypes,
+})
+

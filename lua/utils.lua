@@ -25,6 +25,14 @@ function _G.t(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
 
+function _G.augroup(name, copts)
+  return vim.api.nvim_create_augroup(name, copts)
+end
+
+function _G.autocmd(events, copts)
+  vim.api.nvim_create_autocmd(events, copts)
+end
+
 function _G.prequire(moduleName)
   local status, moduleObj = pcall(require, moduleName)
   if not status then
