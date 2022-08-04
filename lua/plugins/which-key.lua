@@ -15,7 +15,7 @@ local leader_map = {
   t = { "Open Integrated Terminal" },
   z = { "Goyo Zen Mode" },
   [";"] = { "Open Dashboard" },
-  ["<Space>"] = { "Telescope Find Files" },
+  -- ["<Space>"] = { "Telescope Find Files" },
 
   l = {
     name = "+LSP",
