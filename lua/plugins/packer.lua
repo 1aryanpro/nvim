@@ -14,11 +14,11 @@ return require 'packer'.startup(function()
   use 'glepnir/dashboard-nvim'
   use 'airblade/vim-gitgutter'
   use 'unblevable/quick-scope'
-  use { 'hoob3rt/lualine.nvim', requires = 'kyazdani42/nvim-web-devicons' }
+  use 'kyazdani42/nvim-web-devicons'
+  use 'hoob3rt/lualine.nvim'
   use 'folke/which-key.nvim'
   use 'lewis6991/impatient.nvim'
   use 'gpanders/editorconfig.nvim'
-  use 'tpope/vim-repeat'
 
   -- Colors
   use 'navarasu/onedark.nvim'
@@ -27,6 +27,7 @@ return require 'packer'.startup(function()
   -- Delimiters
   use 'windwp/nvim-autopairs'
   use 'tpope/vim-surround'
+  use 'tpope/vim-repeat'
   use 'numToStr/Comment.nvim'
   use 'norcalli/nvim-colorizer.lua'
 
@@ -39,10 +40,9 @@ return require 'packer'.startup(function()
     requires = {
       'nvim-lua/popup.nvim',
       'nvim-lua/plenary.nvim',
-      'kyazdani42/nvim-web-devicons'
     } }
-  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', requires = 'nvim-telescope/telescope.nvim' }
-  use { 'nvim-telescope/telescope-file-browser.nvim', requires = 'nvim-telescope/telescope.nvim' }
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use 'nvim-telescope/telescope-file-browser.nvim'
 
   -- FT Plugins
   use 'sheerun/vim-polyglot' -- generic
@@ -53,15 +53,15 @@ return require 'packer'.startup(function()
   use 'williamboman/nvim-lsp-installer'
   use 'jose-elias-alvarez/null-ls.nvim'
 
-  -- Autocomplete
-  use 'hrsh7th/nvim-cmp'
-  use { 'hrsh7th/cmp-nvim-lsp', requires = 'hrsh7th/nvim-cmp' }
-  use { 'hrsh7th/cmp-buffer', requires = 'hrsh7th/nvim-cmp' }
-  use { 'hrsh7th/cmp-path', requires = 'hrsh7th/nvim-cmp' }
-  use { 'saadparwaiz1/cmp_luasnip', requires = 'hrsh7th/nvim-cmp' }
-
   -- Snippets
   use 'L3MON4D3/LuaSnip'
-  use { 'rafamadriz/friendly-snippets', requires = 'L3MON4D3/LuaSnip' }
+  use 'rafamadriz/friendly-snippets'
+
+  -- Autocomplete
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'saadparwaiz1/cmp_luasnip'
 
 end)

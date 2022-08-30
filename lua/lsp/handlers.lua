@@ -25,9 +25,9 @@ M.setup = function()
 end
 
 M.on_attach = function(client, _)
-  if client.name == "tsserver" or client.name == "denols" then
-    client.resolved_capabilities.document_formatting = false
-  end
+  -- if client.name == "tsserver" or client.name == "denols" then
+  --   client.resolved_capabilities.document_formatting = false
+  -- end
 end
 
 local cmp_nvim_lsp = require("cmp_nvim_lsp")
