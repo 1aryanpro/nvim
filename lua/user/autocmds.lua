@@ -2,7 +2,7 @@
 local spellFiles = augroup('spellFiles', { clear = true })
 autocmd({ "FileType" }, {
   pattern = { "markdown", "text" },
-  callback = function() vim.bo.spell = true end,
+  callback = function() vim.opt_local.spell = true end,
   group = spellFiles,
 })
 
