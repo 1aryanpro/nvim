@@ -50,8 +50,9 @@ return require 'packer'.startup(function()
 
   -- Language Server Protocol
   use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
   use 'jose-elias-alvarez/null-ls.nvim'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'
