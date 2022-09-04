@@ -11,12 +11,12 @@ vim.g.dashboard_custom_section = {
   },
 }
 
-vim.cmd([[
+vim.cmd [[
 function OpenConfig() abort
   cd ~/.config/nvim/
   call TelescopeProjectFiles()
 endfunction
-]])
+]]
 
 vim.g.dashboard_custom_header = {
 ' ███╗   ██╗ ███████╗  ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',

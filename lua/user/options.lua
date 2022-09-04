@@ -7,7 +7,7 @@ vim.opt.completeopt = { 'menuone', 'noselect' }
 vim.opt.timeoutlen = 500
 
 -- characters
-vim.opt.listchars = { trail="·", tab=">-" }
+vim.opt.listchars = { trail='·', tab='├─' }
 vim.opt.list = true
 vim.opt.encoding = 'UTF-8'
 

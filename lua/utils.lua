@@ -6,19 +6,19 @@ function _G.keymap(mode, from, to, copts)
 end
 
 function _G.noremap(from, to, copts)
-  keymap("", from, to, copts)
+  keymap('', from, to, copts)
 end
 
 function _G.nnoremap(from, to, copts)
-  keymap("n", from, to, copts)
+  keymap('n', from, to, copts)
 end
 
 function _G.vnoremap(from, to, copts)
-  keymap("v", from, to, copts)
+  keymap('v', from, to, copts)
 end
 
 function _G.onoremap(from, to, copts)
-  keymap("o", from, to, copts)
+  keymap('o', from, to, copts)
 end
 
 function _G.t(str)

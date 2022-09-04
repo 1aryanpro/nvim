@@ -6,7 +6,7 @@ vim.g.gitgutter_sign_removed            = '▐'
 vim.g.gitgutter_sign_removed_first_line = '▐'
 vim.g.gitgutter_sign_modified_removed   = '▐'
 
-vim.cmd([[
+vim.cmd [[
 function! GitAdded()
   let [a,m,r] = GitGutterGetHunkSummary()
   if a + m + r == 0
@@ -30,5 +30,5 @@ function! GitRemoved()
   endif
   return printf('-%d', r)
 endfunction
-]])
+]]
 

@@ -1,7 +1,9 @@
-noremap('<Space>', '<Nop>') -- Space for leader key
-vim.g.mapleader = " "
+-- Space for leader key
+noremap('<Space>', '<Nop>')
+vim.g.mapleader = ' '
 
-nnoremap('<leader>h', '<cmd>noh<cr>') -- better searching
+-- better searching
+nnoremap('<leader>h', '<cmd>noh<cr>')
 
 -- copy to clipboard
 nnoremap('<leader>yf', '<cmd>%y+<cr>')

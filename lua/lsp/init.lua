@@ -1,3 +1,3 @@
 require 'lsp.mappings'
-require 'lsp.lsp-installer'
+require 'lsp.mason'
 require 'lsp.null-ls'

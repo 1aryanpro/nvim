@@ -5,7 +5,7 @@ local builtin = require 'telescope.builtin'
 
 telescope.setup {
   defaults = {
-    file_ignore_patterns = {"node_modules", ".DS_Store"},
+    file_ignore_patterns = {'node_modules', '.DS_Store'},
     file_sorter = sorters.get_fzy_sorter,
     color_devicons = true,
     preview = {treesitter = true},
@@ -42,8 +42,8 @@ function _G.TelescopeProjectFiles()
   local ok = pcall(builtin.git_files)
   if not ok then builtin.find_files() end
 end
-vim.cmd([[
+vim.cmd [[
 function TelescopeProjectFiles() abort
   lua TelescopeProjectFiles()
 endfunction
-]])
+]]
