@@ -37,12 +37,6 @@ local leader_map = {
     p = { 'Recent Projects' },
   },
 
-  c = {
-    name = '+ColorSchemes',
-    c = { 'Change Color Scheme' },
-    -- s = { 'Toggle OneDark' },
-  },
-
   y = {
     name = '+YankCB',
     f = { 'Copy File' },

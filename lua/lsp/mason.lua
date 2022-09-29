@@ -18,7 +18,7 @@ mason_lsp.setup_handlers { function(server_name)
 
   local config_exists, server_opts = pcall(require, 'lsp.settings.' .. server_name)
 
-  if config then
+  if config_exists then
     opts = vim.tbl_deep_extend('force', server_opts, opts)
   end
 

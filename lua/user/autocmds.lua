@@ -2,7 +2,10 @@
 local spellFiles = augroup('spellFiles', { clear = true })
 autocmd({ 'FileType' }, {
   pattern = { 'markdown', 'text' },
-  callback = function() vim.opt_local.spell = true end,
+  callback = function()
+    vim.opt_local.spell = true
+    vim.opt.linebreak = true -- text wrapping
+  end,
   group = spellFiles,
 })
 
@@ -24,4 +27,3 @@ autocmd(bufChange, {
   callback = function() vim.bo.filetype = 'kitty' end,
   group = customFileTypes,
 })
-

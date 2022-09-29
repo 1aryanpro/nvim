@@ -1,15 +1,18 @@
 return {
   settings = {
     Lua = {
-      diagnostics = {
-        globals = { 'vim', 'use' },
+      completion = {
+        callSnippet = "Replace",
       },
-      workspace = {
-        library = {
-          [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-          [vim.fn.stdpath('config') .. '/lua'] = true,
-        },
-      },
+      -- diagnostics = {
+      --   globals = { 'vim', 'use' },
+      -- },
+      -- workspace = {
+      --   library = {
+      --     [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+      --     [vim.fn.stdpath('config') .. '/lua'] = true,
+      --   },
+      -- },
     },
   },
 }

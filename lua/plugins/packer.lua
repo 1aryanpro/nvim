@@ -47,6 +47,7 @@ return require 'packer'.startup(function()
   -- FT Plugins
   use 'sheerun/vim-polyglot' -- generic
   use { 'fladson/vim-kitty', ft = 'kitty' }
+  use "folke/lua-dev.nvim"
 
   -- Language Server Protocol
   use 'neovim/nvim-lspconfig'
