@@ -1,14 +1,8 @@
-vim.g.dashboard_default_executive = 'telescope'
+local db = require 'dashboard'
 
-vim.g.dashboard_custom_section = {
-  a = {
-    description = { '  Search Files' },
-    command = 'Telescope find_files'
-  },
-  d = {
-    description = { '  Open Config ' },
-    command = vim.fn.OpenConfig
-  },
+db.custom_center = {
+  {icon = '  ', desc = 'Search Files', action = 'Telescope find_files'},
+  {icon = '  ', desc = 'Open Config ', action = vim.fn.OpenConfig}
 }
 
 vim.cmd [[
@@ -18,7 +12,7 @@ function OpenConfig() abort
 endfunction
 ]]
 
-vim.g.dashboard_custom_header = {
+db.custom_header = {
   ' ███╗   ██╗ ███████╗  ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
   ' ████╗  ██║ ██╔════╝ ██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
   ' ██╔██╗ ██║ █████╗   ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
@@ -27,4 +21,4 @@ vim.g.dashboard_custom_header = {
   ' ╚═╝  ╚═══╝ ╚══════╝  ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
 }
 
-vim.g.dashboard_custom_footer = { '' }
+db.custom_footer = { '' }
