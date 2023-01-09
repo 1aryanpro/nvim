@@ -25,7 +25,7 @@ return require 'packer'.startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Delimiters
-  use 'windwp/nvim-autopairs'
+  use 'm4xshen/autoclose.nvim'
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
   use 'numToStr/Comment.nvim'

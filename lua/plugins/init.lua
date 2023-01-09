@@ -3,7 +3,7 @@ require 'plugins.packer'
 require 'plugins.impatient'
 require 'plugins.mappings'
 
-require 'plugins.autopairs'
+require 'plugins.autoclose'
 require 'plugins.cmp-config'
 require 'plugins.comment'
 require 'plugins.dashboard'
