@@ -17,6 +17,7 @@ return require 'packer'.startup(function()
   use 'kyazdani42/nvim-web-devicons'
   use 'hoob3rt/lualine.nvim'
   use 'folke/which-key.nvim'
+  use 'ja-ford/delaytrain.nvim'
   use 'lewis6991/impatient.nvim'
   use 'gpanders/editorconfig.nvim'
 
@@ -47,13 +48,14 @@ return require 'packer'.startup(function()
   -- FT Plugins
   use 'sheerun/vim-polyglot' -- generic
   use { 'fladson/vim-kitty', ft = 'kitty' }
-  use "folke/lua-dev.nvim"
+  use "folke/neodev.nvim"
 
   -- Language Server Protocol
   use 'neovim/nvim-lspconfig'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
+  use 'danymat/neogen'
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'

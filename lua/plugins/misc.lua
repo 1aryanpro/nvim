@@ -6,3 +6,10 @@ require 'colorizer'.setup({
   'vue';
   css = { rgb_fn = true; };
 }, { names = false; })
+
+require 'delaytrain'.setup {
+  grace_period = 2,
+  ignore_filetypes = { "help" }
+}
+
+require 'neogen'.setup { snippet_engine = "luasnip" }
