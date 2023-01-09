@@ -12,8 +12,6 @@ wk.setup {
 
 local leader_map = {
   h = { 'Remove Highlight' },
-  t = { 'Open Integrated Terminal' },
-  z = { 'Goyo Zen Mode' },
   [';'] = { 'Open Dashboard' },
   -- ['<Space>'] = { 'Telescope Find Files' },
 

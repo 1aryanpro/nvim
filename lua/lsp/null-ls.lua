@@ -6,6 +6,5 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup {
   debug = false,
   sources = {
-    formatting.prettierd.with { extra_args = { '--single-quote', '--jsx-single-quote' } },
   },
 }
