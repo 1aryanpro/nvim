@@ -6,7 +6,7 @@ nnoremap('gl', '<cmd>lua vim.diagnostic.open_float({ border = \'rounded\' })<CR>
 nnoremap('K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 
 nnoremap('<leader>lk', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
-nnoremap('<leader>lf', '<cmd>lua vim.lsp.buf.formatting_sync()<CR>')
+nnoremap('<leader>lf', '<cmd>lua vim.lsp.buf.format()<CR>')
 nnoremap('<leader>lr', '<cmd>lua vim.lsp.buf.rename()<CR>')
 nnoremap('<leader>la', '<cmd>lua vim.lsp.buf.code_action()<CR>')
 
