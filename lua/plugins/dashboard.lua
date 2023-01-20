@@ -1,8 +1,9 @@
 local db = require 'dashboard'
 
 db.custom_center = {
-  {icon = '  ', desc = 'Search Files', action = 'Telescope find_files'},
-  {icon = '  ', desc = 'Open Config ', action = vim.fn.OpenConfig}
+  -- {icon = '  ', desc = 'Search Files', action = 'Telescope find_files'},
+  -- {icon = '  ', desc = 'Open Config ', action = vim.fn.OpenConfig}
+  { desc = "Time to code!!" }
 }
 
 vim.cmd [[

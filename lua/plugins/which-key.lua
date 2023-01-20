@@ -25,6 +25,12 @@ local leader_map = {
     f = { 'Format File' },
   },
 
+  n = {
+    name = "+Neogen",
+    c = { 'Class' },
+    f = { 'Function' }
+  },
+
   f = {
     name = '+Telescope',
     f = { 'Find Files' },

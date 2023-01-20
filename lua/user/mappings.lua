@@ -3,11 +3,11 @@ noremap('<Space>', '<Nop>')
 vim.g.mapleader = ' '
 
 -- better searching
-nnoremap('<leader>h', '<cmd>noh<cr>')
+nnoremap('<leader>h', ':noh<cr>')
 
 -- copy to clipboard
-nnoremap('<leader>yf', '<cmd>%y+<cr>')
-nnoremap('<leader>yy', '<cmd>normal! "+yy<cr>')
+nnoremap('<leader>yf', ':%y+<cr>')
+nnoremap('<leader>yy', ':normal! "+yy<cr>')
 
 -- Screen cursor movement
 noremap('k', 'gk')

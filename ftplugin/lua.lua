@@ -1,1 +1,1 @@
-require 'lua-dev'.setup()
+require 'neodev'.setup()

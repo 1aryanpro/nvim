@@ -9,7 +9,9 @@ require 'colorizer'.setup({
 
 require 'delaytrain'.setup {
   grace_period = 2,
-  ignore_filetypes = { "help" }
+  ignore_filetypes = { "help", "mason"}
 }
 
 require 'neogen'.setup { snippet_engine = "luasnip" }
+
+require 'neoscroll'.setup()

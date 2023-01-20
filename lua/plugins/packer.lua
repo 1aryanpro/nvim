@@ -14,6 +14,7 @@ return require 'packer'.startup(function()
   use 'glepnir/dashboard-nvim'
   use 'airblade/vim-gitgutter'
   use 'unblevable/quick-scope'
+  use 'karb94/neoscroll.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'hoob3rt/lualine.nvim'
   use 'folke/which-key.nvim'

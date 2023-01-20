@@ -1,11 +1,14 @@
 -- Dashboard
-nnoremap('<Leader>;', '<cmd>Dashboard<CR>')
-nnoremap('<Leader>fm', '<cmd>DashboardJumpMark<CR>')
+nnoremap('<Leader>;', ':Dashboard<CR>')
+nnoremap('<Leader>fm', ':DashboardJumpMark<CR>')
 
 -- Telescope
-nnoremap('<leader>fb', '<cmd>lua require \'telescope\'.extensions.file_browser.file_browser()<cr>')
-nnoremap('<leader>fu', '<cmd>Telescope buffers<cr>')
-nnoremap('<leader>ff', '<cmd>Telescope find_files<cr>')
-nnoremap('<leader>fg', '<cmd>Telescope git_files<cr>')
-nnoremap('<Leader>fa', '<cmd>Telescope live_grep<CR>')
+nnoremap('<leader>fb', ':lua require \'telescope\'.extensions.file_browser.file_browser()<CR>')
+nnoremap('<leader>fu', ':Telescope buffers<CR>')
+nnoremap('<leader>ff', ':Telescope find_files<CR>')
+nnoremap('<leader>fg', ':Telescope git_files<CR>')
+nnoremap('<Leader>fa', ':Telescope live_grep<CR>')
 
+-- Neogen
+nnoremap('<leader>nf', ':Neogen func<CR>')
+nnoremap('<leader>nc', ':Neogen class<CR>')

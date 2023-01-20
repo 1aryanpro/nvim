@@ -2,7 +2,8 @@ require'lualine'.setup {
   options = {
     theme = 'auto',
     disabled_filetypes = {'which_key'},
-    component_separators = { left = ''}
+    section_separators = {left = '▌', right = '▐'},
+    component_separators = ''
   },
   sections = {
     lualine_a = {'mode'},
