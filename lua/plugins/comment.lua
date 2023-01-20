@@ -1,12 +1,7 @@
 local comment    = require 'Comment'
 local treesitter = require 'nvim-treesitter.configs'
 
-treesitter.setup {
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
-  }
-}
+treesitter.setup {}
 
 comment.setup {
   ignore = '^$',
