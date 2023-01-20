@@ -1,3 +1,15 @@
+-- Split :help vertically
+local vertHelp = augroup('vertHelp', {clear = true})
+autocmd({ 'FileType' }, {
+    pattern = { 'help' },
+    callback = function ()
+      vim.opt_local.bufhidden = 'unload'
+      vim.cmd [[wincmd L]]
+      vim.cmd [[vert resize 90]]
+    end,
+    group = vertHelp
+  })
+
 -- Spellcheck md and txt files
 local spellFiles = augroup('spellFiles', { clear = true })
 autocmd({ 'FileType' }, {
