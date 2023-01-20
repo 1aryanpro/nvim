@@ -20,6 +20,7 @@ return require 'packer'.startup(function()
   use 'folke/which-key.nvim'
   use 'ja-ford/delaytrain.nvim'
   use 'lewis6991/impatient.nvim'
+  use 'dstein64/vim-startuptime'
   use 'gpanders/editorconfig.nvim'
 
   -- Colors
@@ -59,7 +60,7 @@ return require 'packer'.startup(function()
   use 'mfussenegger/nvim-jdtls'
 
   -- Snippets
-  use 'L3MON4D3/LuaSnip'
+  use {"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"}
   use 'rafamadriz/friendly-snippets'
 
   -- Autocomplete
