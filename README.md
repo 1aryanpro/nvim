@@ -3,6 +3,5 @@ This is my neovim configuration that I've been working on for quite a while. It 
 
 To get the full features of this config you need:
 * neovim
-* node and npm
-  * for LSP
+* jdtls (if you want java lsp)
 

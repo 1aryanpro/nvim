@@ -11,6 +11,7 @@ mason_lsp.setup {
 handlers.setup()
 
 mason_lsp.setup_handlers { function(server_name)
+
   local opts = {
     on_attach = handlers.on_attach,
     capabilities = handlers.capabilities
