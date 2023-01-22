@@ -17,6 +17,7 @@ return require 'packer'.startup(function()
   use 'karb94/neoscroll.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'hoob3rt/lualine.nvim'
+  use 'Isrothy/lualine-diagnostic-message'
   use 'folke/which-key.nvim'
   use 'ja-ford/delaytrain.nvim'
   use 'lewis6991/impatient.nvim'

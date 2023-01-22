@@ -10,9 +10,15 @@ require 'lualine'.setup {
     lualine_b = { 'branch' },
     lualine_c = {
       'filename',
-      {'GitAdded',   color = {fg = '#98c379'}},
-      {'GitEdited',  color = {fg = '#61afef'}},
-      {'GitRemoved', color = {fg = '#e86671'}}
+      {
+        'diagnostic-message',
+        colors = {
+          error = '#E86671',
+          warn = '#E5C07B',
+          info = '#E5C07B',
+          hint = '#56B6C2'
+        }
+      }
     },
     lualine_x = { 'filetype' },
     lualine_y = { 'progress' },
