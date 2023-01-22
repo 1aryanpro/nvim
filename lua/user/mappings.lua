@@ -1,6 +1,7 @@
 -- Space for leader key
 noremap('<Space>', '<Nop>')
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 -- better searching
 nnoremap('<leader>h', ':noh<cr>')
