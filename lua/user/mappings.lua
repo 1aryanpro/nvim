@@ -8,7 +8,6 @@ nnoremap('<leader>h', ':noh<cr>')
 
 -- copy to clipboard
 nnoremap('<leader>yf', ':%y+<cr>')
-nnoremap('<leader>yy', ':normal! "+yy<cr>')
 
 -- Screen cursor movement
 noremap('k', 'gk')
