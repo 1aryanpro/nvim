@@ -1,5 +1,8 @@
-require "autoclose".setup {
-  options = {
-    disabled_filetypes = { "TelescopePrompt" }
+return {
+  'm4xshen/autoclose.nvim',
+  config = {
+    options = {
+      disabled_filetypes = { 'TelescopePrompt' }
+    }
   }
 }

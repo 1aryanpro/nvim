@@ -1,11 +1,9 @@
-local comment    = require 'Comment'
-local treesitter = require 'nvim-treesitter.configs'
-
-treesitter.setup {}
-
-comment.setup {
-  ignore = '^$',
-  mappings = {
-    extra = true,
+return {
+  'numToStr/Comment.nvim',
+  config = {
+    ignore = '^$',
+    mappings = {
+      extra = true,
+    }
   }
 }
