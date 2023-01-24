@@ -12,7 +12,7 @@ M.setup = function()
     vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = '' })
   end
 
-  local config = {
+  local diagnosticsConfig = {
     virtual_text = false,
     signs = {
       active = signs,
@@ -21,7 +21,7 @@ M.setup = function()
     severity_sort = true,
   }
 
-  vim.diagnostic.config(config)
+  vim.diagnostic.config(diagnosticsConfig)
 end
 
 M.on_attach = function(client, _)
