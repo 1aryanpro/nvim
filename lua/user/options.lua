@@ -3,13 +3,12 @@ vim.opt.mouse = 'a'
 vim.opt.scrolloff = 3
 vim.opt.spelllang = 'en_us'
 vim.opt.completeopt = { 'menuone', 'noselect' }
-vim.opt.timeoutlen = 500
 vim.opt.colorcolumn = '80'
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- characters
-vim.opt.listchars = { trail='·', tab='├─' }
+vim.opt.listchars = { trail='·', tab='┋ ' }
 vim.opt.list = true
 vim.opt.encoding = 'UTF-8'
 
@@ -36,4 +35,3 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = 'yes'
-

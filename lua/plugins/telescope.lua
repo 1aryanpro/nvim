@@ -5,6 +5,7 @@ return { 'nvim-telescope/telescope.nvim',
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   },
 
+  cmd = 'Telescope',
   config = function()
     local telescope = require 'telescope'
     local sorters = require 'telescope.sorters'
@@ -31,10 +32,9 @@ return { 'nvim-telescope/telescope.nvim',
         },
       },
     }
-
     telescope.load_extension 'fzf'
-
   end,
+
   init = function()
     nnoremap('<leader>fb', ':Telescope buffers<CR>')
     nnoremap('<leader>ff', ':Telescope find_files<CR>')

@@ -1,13 +1,7 @@
 return {
   -- Misc
-  {
-    'karb94/neoscroll.nvim',
-    config = {},
-  },
-  {
-    'kyazdani42/nvim-web-devicons',
-    lazy = false
-  },
+  { 'karb94/neoscroll.nvim', config = {} },
+  { 'kyazdani42/nvim-web-devicons', lazy = false },
   {
     'ja-ford/delaytrain.nvim',
     config = {
@@ -15,25 +9,28 @@ return {
       ignore_filetypes = { 'help', 'mason', 'lazy', 'oil' }
     }
   },
-  'dstein64/vim-startuptime',
-  'gpanders/editorconfig.nvim',
-  {
-    'j-hui/fidget.nvim',
-    config = {}
-  },
+  { 'dstein64/vim-startuptime', cmd = 'StartupTime' },
+  { 'j-hui/fidget.nvim', config = {} },
   {
     'stevearc/oil.nvim',
+    cmd = 'Oil',
     config = {
       skip_confirm_for_simple_edits = true,
       keymaps = {
         ['g?'] = 'actions.show_help',
-        ['<Esc>'] = 'actions.close',
         ['<CR>'] = 'actions.select',
         ['<BS>'] = 'actions.parent',
+        ['-'] = 'actions.open_cwd',
+        ['q'] = 'actions.close',
       },
       use_default_keymaps = false,
       view_options = {
         show_hidden = true,
+      },
+      float = {
+        win_options = {
+          winblend = 0,
+        },
       }
     },
     init = function()
@@ -62,11 +59,8 @@ return {
     'norcalli/nvim-colorizer.lua',
     config = function()
       require 'colorizer'.setup({
-        'css';
-        'javascript';
-        'vue';
-        css = { rgb_fn = true; };
-      }, { names = false; })
+        '*'
+      }, { names = false })
     end
   },
 
@@ -76,7 +70,7 @@ return {
 
   -- FT Plugins
   { 'fladson/vim-kitty', ft = 'kitty' },
-  'folke/neodev.nvim',
+  { 'folke/neodev.nvim', ft = 'lua' },
 
   -- Language Server Protocol
   'neovim/nvim-lspconfig',
@@ -84,18 +78,22 @@ return {
   'williamboman/mason-lspconfig.nvim',
   {
     'danymat/neogen',
-    config = function()
-      require 'neogen'.setup { snippet_engine = 'luasnip' }
-
+    config = { snippet_engine = 'luasnip' },
+    init = function()
       nnoremap('<leader>nf', ':Neogen func<CR>')
       nnoremap('<leader>nc', ':Neogen class<CR>')
     end,
-    ft = 'lua',
   },
   'tpope/vim-sleuth',
   {
     'mfussenegger/nvim-jdtls',
-    ft = 'java'
+    ft = 'java',
+    config = function()
+      require('jdtls').start_or_attach({
+        cmd = { '/opt/homebrew/bin/jdtls' },
+        root_dir = vim.fs.dirname(vim.fs.find({ '.gradlew', '.git', 'mvnw' }, { upward = true })[1]),
+      })
+    end,
   },
 
 }

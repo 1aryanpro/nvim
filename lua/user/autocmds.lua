@@ -1,19 +1,13 @@
--- absolute numbers in INSERT mode
-local abIns = augroup('abIns')
-autocmd({ 'InsertEnter' }, {
-  pattern = '*',
-  callback = function()
-    vim.opt.relativenumber = false
-  end,
-  group = abIns
-})
-autocmd({ 'InsertLeave' }, {
-  pattern = '*',
-  callback = function()
-    vim.opt.relativenumber = true
-  end,
-  group = abIns
-})
+-- Format file on save
+-- local autoFormat = augroup('autoFormat')
+-- autocmd({ 'BufWritePre' }, {
+--   pattern = { '*' },
+--   callback = function()
+--     vim.lsp.buf.format()
+--   end,
+--   group = autoFormat
+-- })
+
 
 -- Split :help vertically
 local vertHelp = augroup('vertHelp')

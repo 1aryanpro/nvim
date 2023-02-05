@@ -3,8 +3,6 @@ local mason_lsp = require 'mason-lspconfig'
 local lspconfig = require 'lspconfig'
 local handlers = require 'lsp.handlers'
 
-require 'neodev'.setup({})
-
 mason.setup()
 mason_lsp.setup {
   automatic_installation = true,

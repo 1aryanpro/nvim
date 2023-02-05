@@ -10,15 +10,14 @@ return {
     },
     sections = {
       lualine_a = { 'mode' },
-      lualine_b = { 'branch' },
+      lualine_b = { 'filename' },
       lualine_c = {
-        'filename',
         {
           'diagnostic-message',
           colors = {
             error = '#E86671',
             warn = '#E5C07B',
-            info = '#E5C07B',
+            info = '#C678DD',
             hint = '#56B6C2'
           },
           icons = {
