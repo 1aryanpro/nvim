@@ -40,9 +40,3 @@ autocmd(bufChange, {
   group = customFileTypes,
 })
 
-autocmd(bufChange, {
-  pattern = '*.njk',
-  callback = function() vim.bo.filetype = 'jinja.html' end,
-  group = customFileTypes,
-})
-
