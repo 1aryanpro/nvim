@@ -21,17 +21,6 @@ autocmd({ 'FileType' }, {
   group = vertHelp
 })
 
--- Spellcheck md and txt files
-local spellFiles = augroup('spellFiles')
-autocmd({ 'FileType' }, {
-  pattern = { 'markdown', 'text' },
-  callback = function()
-    vim.opt_local.spell = true
-    vim.opt.linebreak = true -- text wrapping
-  end,
-  group = spellFiles,
-})
-
 -- Set Custom Filetypes
 local customFileTypes = augroup('customFileTypes')
 local bufChange = { 'BufRead', 'BufNewFile' }
@@ -50,3 +39,10 @@ autocmd(bufChange, {
   callback = function() vim.bo.filetype = 'kitty' end,
   group = customFileTypes,
 })
+
+autocmd(bufChange, {
+  pattern = '*.njk',
+  callback = function() vim.bo.filetype = 'jinja.html' end,
+  group = customFileTypes,
+})
+
