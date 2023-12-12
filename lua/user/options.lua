@@ -6,6 +6,13 @@ vim.opt.completeopt = { 'menuone', 'noselect' }
 vim.opt.colorcolumn = '80'
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.backupcopy = 'yes'
+
+-- Linebreak
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakindent = true
+vim.opt.breakat = ' \t'
 
 -- characters
 vim.opt.listchars = { trail='·', tab='┋ ' }

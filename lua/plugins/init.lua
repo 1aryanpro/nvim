@@ -49,6 +49,12 @@ return {
   },
   {
     'nvim-treesitter/nvim-treesitter',
+    config = {
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = { "markdown" },
+      },
+    },
     run = ':TSUpdate',
   },
 
