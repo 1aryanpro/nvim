@@ -1,16 +1,16 @@
 return {
   -- Misc
-  { 'karb94/neoscroll.nvim', config = {} },
+  { 'karb94/neoscroll.nvim',        config = {} },
   { 'kyazdani42/nvim-web-devicons', lazy = false },
   {
     'ja-ford/delaytrain.nvim',
     config = {
       grace_period = 2,
-      ignore_filetypes = { 'help', 'mason', 'lazy', 'oil' }
+      ignore_filetypes = { 'help', 'mason', 'lazy', 'oil', 'markdown', 'text' }
     }
   },
   { 'dstein64/vim-startuptime', cmd = 'StartupTime' },
-  { 'j-hui/fidget.nvim', config = {} },
+  { 'j-hui/fidget.nvim',        config = {} },
   {
     'stevearc/oil.nvim',
     cmd = 'Oil',

@@ -17,14 +17,14 @@ return {
           colors = {
             error = '#E86671',
             warn = '#E5C07B',
-            info = '#C678DD',
-            hint = '#56B6C2'
+            hint = '#C678DD',
+            info = '#56B6C2'
           },
           icons = {
             error = '',
             warn = '',
-            info = '',
-            hint = ''
+            hint = '',
+            info = ''
           }
         }
       },
