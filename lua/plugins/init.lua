@@ -73,10 +73,11 @@ return {
   -- Indentation
   'lukas-reineke/indent-blankline.nvim',
 
-
   -- FT Plugins
-  { 'fladson/vim-kitty', ft = 'kitty' },
-  { 'folke/neodev.nvim', ft = 'lua' },
+  { 'fladson/vim-kitty',        ft = 'kitty' },
+  { 'folke/neodev.nvim',        ft = 'lua' },
+  { 'Glench/Vim-Jinja2-Syntax', ft = 'jinja' },
+  { 'stephenway/postcss.vim',   ft = 'css' },
 
   -- Language Server Protocol
   'neovim/nvim-lspconfig',
