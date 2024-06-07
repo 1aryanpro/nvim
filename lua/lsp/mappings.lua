@@ -12,4 +12,3 @@ nnoremap('<leader>la', ':lua vim.lsp.buf.code_action()<CR>')
 
 nnoremap('[g', ':lua vim.diagnostic.goto_prev()<CR>')
 nnoremap(']g', ':lua vim.diagnostic.goto_next()<CR>')
-

@@ -1,29 +1,29 @@
 local kind_icons = {
-  Text = '',
-  Method = 'm',
-  Function = '',
-  Constructor = '',
-  Field = '',
-  Variable = '',
-  Class = '',
-  Interface = '',
-  Module = '',
-  Property = '',
-  Unit = '',
-  Value = '',
-  Enum = '',
-  Keyword = '',
-  Snippet = '',
-  Color = '',
-  File = '',
-  Reference = '',
-  Folder = '',
-  EnumMember = '',
-  Constant = '',
-  Struct = '',
-  Event = '',
-  Operator = '',
-  TypeParameter = '',
+  Text = "",
+  Method = "󰆧",
+  Function = "󰊕",
+  Constructor = "",
+  Field = "󰇽",
+  Variable = "󰂡",
+  Class = "󰠱",
+  Interface = "",
+  Module = "",
+  Property = "󰜢",
+  Unit = "",
+  Value = "󰎠",
+  Enum = "",
+  Keyword = "󰌋",
+  Snippet = "",
+  Color = "󰏘",
+  File = "󰈙",
+  Reference = "",
+  Folder = "󰉋",
+  EnumMember = "",
+  Constant = "󰏿",
+  Struct = "",
+  Event = "",
+  Operator = "󰆕",
+  TypeParameter = "󰅲",
 }
 
 return {
@@ -32,8 +32,9 @@ return {
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
     'saadparwaiz1/cmp_luasnip',
-    { 'L3MON4D3/LuaSnip', version = '*' },
+    { 'L3MON4D3/LuaSnip', version = 'v2.*' },
     'rafamadriz/friendly-snippets',
   },
   config = function()
@@ -48,9 +49,6 @@ return {
         end,
       },
       mapping = {
-        ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-        ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
-        ['<C-y>'] = cmp.config.disable,
         ['<C-e>'] = cmp.mapping {
           i = cmp.mapping.abort(),
           c = cmp.mapping.close(),
@@ -82,20 +80,14 @@ return {
           else
             fallback()
           end
-        end, {
-          'i',
-          's',
-        }),
+        end, { 'i', 's' }),
         ['<Up>'] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_prev_item()
           else
             fallback()
           end
-        end, {
-          'i',
-          's',
-        }),
+        end, { 'i', 's' }),
       },
       formatting = {
         fields = { 'kind', 'abbr', 'menu' },
@@ -107,16 +99,26 @@ return {
             luasnip = '[Snippet]',
             path = '[Path]',
             buffer = '[Buffer]',
+            cmdline = '[Cmd]',
+            mkdnflow = '[MD]',
           })[entry.source.name]
           return vim_item
         end,
       },
       sources = cmp.config.sources {
         -- { name = 'buffer' },
-        -- { name = 'path' },
+        { name = 'path' },
         { name = 'luasnip' },
         { name = 'nvim_lsp' },
       }
     }
+
+    cmp.setup.cmdline(':', {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = cmp.config.sources({
+        { name = 'path' },
+        { name = 'cmdline' },
+      })
+    })
   end,
 }

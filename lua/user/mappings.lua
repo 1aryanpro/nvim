@@ -28,5 +28,5 @@ nnoremap('<Up>', '<C-w>k')
 nnoremap('<Right>', '<C-w>l')
 
 -- Better Tabbing
-vnoremap('<Tab>', '>gv')
-vnoremap('<S-Tab>', '<gv')
+vnoremap('>', '>gv')
+vnoremap('<', '<gv')

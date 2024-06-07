@@ -1,8 +1,8 @@
 return {
   'm4xshen/autoclose.nvim',
-  config = {
+  opts = {
     options = {
-      disabled_filetypes = { 'TelescopePrompt' }
+      disabled_filetypes = { 'TelescopePrompt', 'markdown' }
     }
   }
 }

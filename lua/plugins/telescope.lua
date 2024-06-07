@@ -1,4 +1,5 @@
-return { 'nvim-telescope/telescope.nvim',
+return {
+  'nvim-telescope/telescope.nvim',
   dependencies = {
     'nvim-lua/popup.nvim',
     'nvim-lua/plenary.nvim',
@@ -34,7 +35,6 @@ return { 'nvim-telescope/telescope.nvim',
     }
     telescope.load_extension 'fzf'
   end,
-
   init = function()
     nnoremap('<leader>fb', ':Telescope buffers<CR>')
     nnoremap('<leader>ff', ':Telescope find_files<CR>')

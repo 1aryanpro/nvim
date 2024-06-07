@@ -10,18 +10,28 @@ mason_lsp.setup {
 
 handlers.setup()
 
-mason_lsp.setup_handlers { function(server_name)
+mason_lsp.setup_handlers {
+  function(server_name)
+    local opts = {
+      on_attach = handlers.on_attach,
+      capabilities = handlers.capabilities
+    }
 
-  local opts = {
-    on_attach = handlers.on_attach,
-    capabilities = handlers.capabilities
-  }
+    local config_exists, server_opts = pcall(require, 'lsp.settings.' .. server_name)
 
-  local config_exists, server_opts = pcall(require, 'lsp.settings.' .. server_name)
+    if config_exists then
+      opts = vim.tbl_deep_extend('force', server_opts, opts)
+    end
 
-  if config_exists then
-    opts = vim.tbl_deep_extend('force', server_opts, opts)
-  end
+    if server_name == 'denols' then
+      for _, client in pairs(vim.lsp.get_active_clients()) do
+        -- stop tsserver if denols is already active
+        if client.name == 'tsserver' then
+          client.stop()
+        end
+      end
+    end
 
-  lspconfig[server_name].setup(opts)
-end }
+    lspconfig[server_name].setup(opts)
+  end,
+}

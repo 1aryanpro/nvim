@@ -3,8 +3,8 @@ local opts = {
   settings = {
     format = {
       enable = false
-    }
-  }
+    },
+  },
 }
 
 return opts

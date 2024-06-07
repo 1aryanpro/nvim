@@ -1,7 +1,7 @@
 return {
   'hoob3rt/lualine.nvim',
   dependencies = { 'Isrothy/lualine-diagnostic-message' },
-  config = {
+  opts = {
     options = {
       theme = 'auto',
       disabled_filetypes = { 'which_key' },

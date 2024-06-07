@@ -1,6 +1,6 @@
 return {
   'numToStr/Comment.nvim',
-  config = {
+  opts = {
     ignore = '^$',
     mappings = {
       extra = true,
