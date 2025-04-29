@@ -3,7 +3,7 @@ vim.opt.mouse = 'a'
 vim.opt.scrolloff = 3
 vim.opt.spelllang = 'en_us'
 vim.opt.completeopt = { 'menuone', 'noselect' }
-vim.opt.colorcolumn = '80'
+vim.opt.colorcolumn = '81'
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.backupcopy = 'yes'
@@ -15,7 +15,7 @@ vim.opt.breakindent = true
 vim.opt.breakat = ' \t'
 
 -- characters
-vim.opt.listchars = { trail='·', tab='┋ ' }
+vim.opt.listchars = { trail = '·', tab = '┋ ' }
 vim.opt.list = true
 vim.opt.encoding = 'UTF-8'
 
