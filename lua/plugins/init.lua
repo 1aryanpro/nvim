@@ -1,7 +1,35 @@
 return {
     -- Misc
-    { 'karb94/neoscroll.nvim',        opts = {} },
-    { 'kyazdani42/nvim-web-devicons', lazy = false },
+    {
+        "mistricky/codesnap.nvim",
+        build = "make",
+        opts = {
+            code_font_family = "MonaspiceNe Nerd Font",
+            watermark = "",
+            bg_x_padding = 61,
+            bg_y_padding = 41,
+            save_path = "~/Desktop/"
+        },
+        cmd = {
+            "CodeSnap", "CodeSnapSave",
+            "CodeSnapASCII",
+            "CodeSnapHighlight", "CodeSnapSaveHighlight",
+        }
+    },
+    {
+        'karb94/neoscroll.nvim',
+        opts = {
+            hide_cursor = false,
+            easing = 'sine',
+            duration_multiplier = 1.4
+        },
+        keys = {
+            '<C-u>', '<C-d>',
+            '<C-b>', '<C-f>',
+            '<C-y>', '<C-e>',
+            'zt', 'zz', 'zb' }
+    },
+    { 'kyazdani42/nvim-web-devicons', opts = {},          lazy = true },
     {
         'ja-ford/delaytrain.nvim',
         opts = {
@@ -14,36 +42,41 @@ return {
         opts = {
             window = {
                 width = 80,
-                height = 0.8,
-            }
-        }
+                height = 0.9
+            },
+            on_open = function()
+                vim.opt_local.number = false
+                vim.opt_local.relativenumber = false
+                vim.opt_local.signcolumn = 'no'
+                vim.opt_local.colorcolumn = ''
+            end
+        },
+        cmd = "ZenMode"
     },
-    { 'dstein64/vim-startuptime', cmd = 'StartupTime' },
+    { 'dstein64/vim-startuptime',     cmd = 'StartupTime' },
     {
         'stevearc/oil.nvim',
         cmd = 'Oil',
         opts = {
             skip_confirm_for_simple_edits = true,
-            keymaps = {
-                ['g?'] = 'actions.show_help',
-                ['<CR>'] = 'actions.select',
-                ['<BS>'] = 'actions.parent',
-                ['-'] = 'actions.open_cwd',
-                ['q'] = 'actions.close',
-            },
-            use_default_keymaps = false,
             view_options = {
                 show_hidden = true,
+                is_always_hidden = function(name, _)
+                    local m = name:match('^.DS_Store$')
+                    return m
+                end,
             },
             float = {
-                win_options = {
-                    winblend = 0,
-                },
+                padding = 10,
+                max_width = 0.5,
+            },
+            keymaps = {
+                ['<BS>'] = { 'actions.parent', mode = 'n' },
             }
         },
-        init = function()
-            nnoremap('<Leader>fo', ':Oil --float<cr>')
-        end,
+        keys = {
+            { '<Leader>fo', ':Oil --float<cr>' }
+        },
     },
 
     -- Colors
@@ -51,7 +84,7 @@ return {
         'navarasu/onedark.nvim',
         lazy = false,
         priority = 1000,
-        config = function()
+        init = function()
             vim.cmd [[colorscheme onedark]]
         end,
     },
@@ -71,29 +104,25 @@ return {
     },
 
     -- Delimiters
+    { 'tpope/vim-repeat',            keys = { '.' } },
     'tpope/vim-surround',
-    'tpope/vim-repeat',
-    {
-        'norcalli/nvim-colorizer.lua',
-        opts = function()
-            require 'colorizer'.setup({
-                '*'
-            }, { names = false })
-        end
-    },
+    { 'norcalli/nvim-colorizer.lua', ft = 'css' },
 
     -- Indentation
     {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
+        ---@module "ibl"
+        ---@type ibl.config
         opts = {
             indent = {
                 char = '▏',
                 highlight = '@comment',
             },
             scope = {
+                char = '▍',
                 show_start = false,
-                highlight = '@annotation',
+                show_end = false,
             },
             exclude = {
                 filetypes = { 'help', 'markdown', 'text', 'terminal', 'dashboard' },
@@ -102,23 +131,45 @@ return {
     },
 
     -- FT Plugins
-    { 'fladson/vim-kitty',        ft = 'kitty' },
-    { 'stephenway/postcss.vim',   ft = 'css' },
-    { 'folke/neodev.nvim',        opts = {} },
+    { 'fladson/vim-kitty',      ft = 'kitty' },
+    { 'stephenway/postcss.vim', ft = 'css' },
+    {
+        'folke/neodev.nvim',
+        cond = function()
+            return vim.loop.cwd() == vim.fn.expand('~/.config/nvim')
+        end,
+        opts = {}
+    },
+    {
+        'MeanderingProgrammer/render-markdown.nvim',
+        dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+        ft = { "markdown", "codecompanion" },
+        ---@module 'render-markdown'
+        ---@type render.md.UserConfig
+        opts = {
+            completions = {
+                blink = { enabled = true }
+            },
+            sign = {
+                enabled = false,
+            },
+            bullet = {
+                icons = { '', '', '' },
+            },
+        },
+    },
 
     -- Language Server Protocol
-    'neovim/nvim-lspconfig',
-    'williamboman/mason.nvim',
+    { 'williamboman/mason.nvim', cmd = 'Mason' },
     'williamboman/mason-lspconfig.nvim',
     {
         'danymat/neogen',
         opts = { snippet_engine = 'luasnip' },
-        init = function()
-            nnoremap('<leader>nf', ':Neogen func<CR>')
-            nnoremap('<leader>nc', ':Neogen class<CR>')
-        end,
+        keys = {
+            { '<leader>nf', ':Neogen func<CR>' },
+            { '<leader>nc', ':Neogen class<CR>' }
+        }
     },
-    'tpope/vim-sleuth',
     {
         'mfussenegger/nvim-jdtls',
         ft = 'java',
